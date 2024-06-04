@@ -1,0 +1,113 @@
+{
+  "name": "Saifeleslam Elsayed",
+  "title": "Web Developer",
+  "email": "saifeleslamelsayed@gmail.com",
+  "summary": "Here should I talk about what I do in one sentence, or a few words",
+  "about": {
+    "past": "I have been working as a software engineer for 2 years, and I have been working on web development for 1 year. I have been working as a software engineer for 2 years, and I have been working on web development for 1 year.",
+    "present": "I am currently working as a software engineer at Vodafone. I am currently working as a software engineer at Vodafone. I am currently working as a software engineer at Vodafone.",
+    "hobbies": "I hope to work on a project that will help me grow and learn new things. I am always looking for new challenges and opportunities to learn and grow. I hope to work on a project that will help me grow and learn new things. I am always looking for new challenges and opportunities to learn and grow."
+  },
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Vodafone",
+      "location": "Cairo, Egypt",
+      "from": "2018",
+      "to": "2019",
+      "description": "I worked as a software engineer at Vodafone for 2 years. I worked on web development and mobile development.",
+      "company_url": "https://www.vodafone.com.eg/",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Vodafone",
+      "location": "Cairo, Egypt",
+      "from": "2018",
+      "to": "2019",
+      "description": "I worked as a software engineer at Vodafone for 2 years. I worked on web development and mobile development.",
+      "company_url": "https://www.vodafone.com.eg/",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "React Native",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Vodafone Egypt",
+      "description": "this the project description. Other details can be added here. this the project description. Other details can be added here. this the project description. Other details can be added here.",
+      "url": "https://www.vodafone.com.eg/",
+      "date": "2018-01-01",
+      "made_at": "Vodafone",
+      "skills": [],
+      "images": [
+        "projects/R0.png",
+        "images/vodafone-1.jpg",
+        "images/vodafone-2.jpg",
+        "images/vodafone-3.jpg"
+      ]
+    },
+    {
+      "title": "Vodafone Egypt",
+      "description": "this the project description. Other details can be added here. this the project description. Other details can be added here.",
+      "url": "https://www.vodafone.com.eg/",
+      "date": "2018-01-01",
+      "made_at": "Vodafone",
+      "skills": ["HTML", "CSS", "JavaScript", "React"],
+      "images": [
+        "projects/R0.png",
+        "images/vodafone-1.jpg",
+        "images/vodafone-2.jpg",
+        "images/vodafone-3.jpg"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "title": "Email",
+      "icon": "icons/email.png",
+      "url": "https://mail.google.com/mail/?view=cm&fs=1&to=saifeleslamelsayed@gmail.com"
+    },
+    {
+      "title": "LinkedIn",
+      "icon": "icons/linkedin.svg",
+      "url": "https://www.linkedin.com/in/saifeleslam-elsayed/"
+    },
+    {
+      "title": "GitHub",
+      "icon": "icons/github.svg",
+      "url": "https://github.com/Saif-El-Eslam?tab=repositories"
+    },
+
+    {
+      "title": "Instagram",
+      "icon": "icons/instagram.svg",
+      "url": "https://www.instagram.com/saif_el_eslam_/"
+    },
+    {
+      "title": "Facebook",
+      "icon": "icons/facebook.svg",
+      "url": "https://www.facebook.com/profile.php?id=100010966657947"
+    }
+  ],
+  "copyWrite": {
+    "design": "https://brittanychiang.com/",
+    "code": "© 2024 Saifeleslam Elsayed."
+  }
+}
