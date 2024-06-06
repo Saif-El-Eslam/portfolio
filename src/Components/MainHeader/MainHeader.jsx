@@ -24,100 +24,109 @@ function MainHeader({ screenWidth, activeSection }) {
         {screenWidth > 1024 && (
           <nav className="MainHeader__nav">
             <ul>
-              <li
-                className="MainHeader__nav__item"
-                onMouseEnter={() => handleMouseEnter("about")}
-                onMouseLeave={handleMouseLeave}
+              <Link
+                to="about"
+                offset={-96}
+                smooth={true}
+                duration={20}
+                activeClass="active"
               >
-                <span>——</span>
-                <span
-                  className={
-                    activeSection === "about" || hoveredItem === "about"
-                      ? "translate-in transition"
-                      : "translate-out transition"
-                  }
+                <li
+                  className="MainHeader__nav__item"
+                  onMouseEnter={() => handleMouseEnter("about")}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  ——
-                </span>
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={20}
-                  activeClass="active"
-                  offset={-96}
-                  className={
-                    activeSection === "about" || hoveredItem === "about"
-                      ? "transition translate-in"
-                      : "transition translate-out"
-                  }
-                >
-                  ABOUT
-                </Link>
-              </li>
+                  <span>——</span>
+                  <span
+                    className={
+                      activeSection === "about" || hoveredItem === "about"
+                        ? "translate-in transition"
+                        : "translate-out transition"
+                    }
+                  >
+                    ——
+                  </span>
+                  <div
+                    className={
+                      activeSection === "about" || hoveredItem === "about"
+                        ? "transition translate-in"
+                        : "transition translate-out"
+                    }
+                  >
+                    ABOUT
+                  </div>
+                </li>
+              </Link>
 
-              <li
-                className="MainHeader__nav__item"
-                onMouseEnter={() => handleMouseEnter("experience")}
-                onMouseLeave={handleMouseLeave}
+              <Link
+                to="experience"
+                smooth={true}
+                duration={20}
+                activeClass="active"
+                offset={-96}
               >
-                <span>——</span>
-                <span
-                  className={
-                    activeSection === "experience" ||
-                    hoveredItem === "experience"
-                      ? "translate-in transition"
-                      : "translate-out transition"
-                  }
+                <li
+                  className="MainHeader__nav__item"
+                  onMouseEnter={() => handleMouseEnter("experience")}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  ——
-                </span>
-                <Link
-                  to="experience"
-                  smooth={true}
-                  duration={20}
-                  activeClass="active"
-                  offset={-96}
-                  className={
-                    activeSection === "experience" ||
-                    hoveredItem === "experience"
-                      ? "transition translate-in"
-                      : "transition translate-out"
-                  }
-                >
-                  EXPERIENCE
-                </Link>
-              </li>
+                  <span>——</span>
+                  <span
+                    className={
+                      activeSection === "experience" ||
+                      hoveredItem === "experience"
+                        ? "translate-in transition"
+                        : "translate-out transition"
+                    }
+                  >
+                    ——
+                  </span>
+                  <div
+                    className={
+                      activeSection === "experience" ||
+                      hoveredItem === "experience"
+                        ? "transition translate-in"
+                        : "transition translate-out"
+                    }
+                  >
+                    EXPERIENCE
+                  </div>
+                </li>
+              </Link>
 
-              <li
-                className="MainHeader__nav__item"
-                onMouseEnter={() => handleMouseEnter("projects")}
-                onMouseLeave={handleMouseLeave}
+              <Link
+                to="projects"
+                smooth={true}
+                duration={20}
+                activeClass="active"
+                offset={-96}
               >
-                <span>——</span>
-                <span
-                  className={
-                    activeSection === "projects" || hoveredItem === "projects"
-                      ? "translate-in transition"
-                      : "translate-out transition"
-                  }
+                <li
+                  className="MainHeader__nav__item"
+                  onMouseEnter={() => handleMouseEnter("projects")}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  ——
-                </span>
-                <Link
-                  to="projects"
-                  smooth={true}
-                  duration={20}
-                  activeClass="active"
-                  offset={-96}
-                  className={
-                    activeSection === "projects" || hoveredItem === "projects"
-                      ? "translate-in transition"
-                      : "translate-out transition"
-                  }
-                >
-                  PROJECTS
-                </Link>
-              </li>
+                  <span>——</span>
+                  <span
+                    className={
+                      activeSection === "projects" || hoveredItem === "projects"
+                        ? "translate-in transition"
+                        : "translate-out transition"
+                    }
+                  >
+                    ——
+                  </span>
+                  <div
+                    className={
+                      activeSection === "projects" || hoveredItem === "projects"
+                        ? "translate-in transition"
+                        : "translate-out transition"
+                    }
+                  >
+                    PROJECTS
+                  </div>
+                </li>
+              </Link>
             </ul>
           </nav>
         )}
