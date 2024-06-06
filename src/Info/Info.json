@@ -82,12 +82,7 @@
       "year": "2018",
       "made_at": "Vodafone",
       "skills": [],
-      "images": [
-        "projects/R0.png",
-        "images/vodafone-1.jpg",
-        "images/vodafone-2.jpg",
-        "images/vodafone-3.jpg"
-      ]
+      "images": ["projects/R0.png"]
     },
     {
       "title": "Vodafone Egypt",
@@ -96,12 +91,7 @@
       "year": "2018",
       "made_at": "Vodafone",
       "skills": ["HTML", "CSS", "JavaScript", "React"],
-      "images": [
-        "projects/R0.png",
-        "images/vodafone-1.jpg",
-        "images/vodafone-2.jpg",
-        "images/vodafone-3.jpg"
-      ]
+      "images": ["projects/R0.png"]
     }
   ],
   "links": [
