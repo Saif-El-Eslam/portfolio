@@ -35,7 +35,7 @@ const Experience = forwardRef(({ screenWidth }, ref) => {
                       rel="noreferrer"
                       className={`Experience__link`}
                     >
-                      {experience.title} • {experience.company}
+                      {experience.title} • <span>{experience.company}</span>
                       <span className={`icon__container arrow-up`}>
                         <img
                           src="/icons/up-right-arrow.png"

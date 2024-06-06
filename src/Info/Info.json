@@ -2,58 +2,84 @@
   "name": "Saifeleslam Elsayed",
   "title": "Web Developer",
   "email": "saifeleslamelsayed@gmail.com",
-  "summary": "Here should I talk about what I do in one sentence, or a few words",
+  "summary": "Passionate tech enthusiast coder adept at creating user-friendly, cutting-edge software solutions.",
   "about": {
-    "past": "I have been working as a software engineer for 2 years, and I have been working on web development for 1 year. I have been working as a software engineer for 2 years, and I have been working on web development for 1 year.",
-    "present": "I am currently working as a software engineer at Vodafone. I am currently working as a software engineer at Vodafone. I am currently working as a software engineer at Vodafone.",
-    "hobbies": "I hope to work on a project that will help me grow and learn new things. I am always looking for new challenges and opportunities to learn and grow. I hope to work on a project that will help me grow and learn new things. I am always looking for new challenges and opportunities to learn and grow."
+    "past": "Reflecting on my journey, it's been a wild ride! From grinding through lectures at Cairo University to diving into the Silicon Valley scene at San José State University, I've been on a quest for knowledge. Snagged a sweet scholarship too! Along the way, I've tinkered with courses and lent a hand with many volunteering work, all in the pursuit of leveling up my tech skills.",
+    "present": "Currently, I'm knee-deep in the tech world, soaking up every bit of knowledge I can get my hands on at AvidBeam. It's been a whirlwind of excitement! I've spearheaded some pretty cool projects like the Shopping Website and Bus Finder. Not to mention, I've clocked in some serious intern hours at spots like Hoopoe Digital and Bosta. Now, I'm itching for more challenges to tackle—bring 'em on!",
+    "hobbies": "When I'm not pounding away at the keyboard, you'll catch me pumping iron at the gym, trying to keep this body in shape! And yeah, I've got a bit of a soft spot for documentaries and news. Especially hooked on anything that dives into the nitty-gritty of economics, history or news. Gotta keep those brain gears turning!"
   },
   "experience": [
     {
-      "title": "Software Engineer",
-      "company": "Vodafone",
-      "location": "Cairo, Egypt",
-      "from": "2018",
-      "to": "2019",
-      "description": "I worked as a software engineer at Vodafone for 2 years. I worked on web development and mobile development.",
-      "company_url": "https://www.vodafone.com.eg/",
+      "title": "Full-stack Developer",
+      "company": "Avidbeam Technologies",
+      "location": "Cairo, Egypt (Remote)",
+      "from": "Sep 2023",
+      "to": "Present",
+      "description": "Developed and maintained website features, ensuring a seamless user experience while leveraging our company's expertise in AI technology. Integrated features of our model 'atun' through seamless integration with the web, providing users with enhanced functionality and a more personalized experience. Demonstrated problem-solving skills by efficiently identifying and rectifying bugs, ensuring optimal functionality. Prioritized code reliability and maintainability by meticulously writing tests and documentation for various components of the app.",
+      "company_url": "https://www.avidbeam.com/",
       "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "React Native",
-        "Node.js",
-        "Express.js",
-        "MongoDB"
+        "ReactJS",
+        "Chakra UI",
+        "Ruby on Rails",
+        "WebSockets",
+        "MongoDB",
+        "elasticsearch",
+        "kubernetes",
+        "Docker",
+        "protobuff",
+        "gRPC",
+        "RSpec",
+        "RSwag"
       ]
     },
     {
-      "title": "Software Engineer",
-      "company": "Vodafone",
+      "title": "Web Development Intern",
+      "company": "Hoopoe Digital",
       "location": "Cairo, Egypt",
-      "from": "2018",
-      "to": "2019",
-      "description": "I worked as a software engineer at Vodafone for 2 years. I worked on web development and mobile development.",
-      "company_url": "https://www.vodafone.com.eg/",
+      "from": "Jul 2022",
+      "to": "Sep 2022",
+      "description": "Played an integral role in the creation of an analytics platform and an indoor mapping application, contributing innovative solutions. Engineered intuitive user interfaces by constructing dynamic forms for map administrators, empowering seamless style and information customization. Leveraged advanced data visualization techniques with D3.js, building reusable graph components, enabling comprehensive data analysis and visualization.",
+      "company_url": "https://www.hoopoe.digital/",
       "skills": [
-        "HTML",
-        "CSS",
+        "HTML & CSS",
         "JavaScript",
-        "React",
-        "React Native",
-        "Node.js",
-        "Express.js",
-        "MongoDB"
+        "TypeScript",
+        "React.js",
+        "D3.js",
+        "Data Visualization",
+        "Data Analysis",
+        "GitLab",
+        "Trello",
+        "Agile"
       ]
+    },
+    {
+      "title": "Quality Control Intern",
+      "company": "Bosta",
+      "location": "Giza, Egypt",
+      "from": "Jul 2021",
+      "to": "Sep 2021",
+      "description": "Implemented rigorous testing methodologies across web and mobile applications and APIs, ensuring optimal performance and reliability in an Agile environment. Documented test cases and results in Jira, facilitating efficient bug identification and resolution processes. Conducted API testing using Postman and MongoDB queries with 3T Studio, ensuring seamless integration and functionality across platforms.",
+      "company_url": "https://bosta.co/ar-eg/home",
+      "skills": ["Agile", "Jira", "Postman", "MongoDB", "3T Studio"]
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Clear Pictures",
+      "location": "Cairo Egypt",
+      "from": "Jul 2021",
+      "to": "Sep 2021",
+      "description": "Co-developed a VR interactive chemistry lab application for Oculus Quest, focusing on game design and object functionality. Gained proficiency in Unity for game object design and C# for adding interactive features.",
+      "company_url": "https://clearpictures.tv/",
+      "skills": ["Unity", "C#"]
     }
   ],
   "projects": [
     {
-      "title": "Vodafone Egypt",
+      "title": "Harvard Business School Next.js Site",
       "description": "this the project description. Other details can be added here. this the project description. Other details can be added here. this the project description. Other details can be added here.",
       "url": "https://www.vodafone.com.eg/",
-      "date": "2018-01-01",
+      "year": "2018",
       "made_at": "Vodafone",
       "skills": [],
       "images": [
@@ -66,8 +92,8 @@
     {
       "title": "Vodafone Egypt",
       "description": "this the project description. Other details can be added here. this the project description. Other details can be added here.",
-      "url": "https://www.vodafone.com.eg/",
-      "date": "2018-01-01",
+      "url": "",
+      "year": "2018",
       "made_at": "Vodafone",
       "skills": ["HTML", "CSS", "JavaScript", "React"],
       "images": [

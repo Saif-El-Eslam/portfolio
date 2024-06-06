@@ -4,6 +4,9 @@
   background-color: #0f172a;
   color: #e7e7e7;
   padding: 3rem 1.5rem;
+  margin: auto;
+
+  max-width: 70rem;
 }
 
 .MainPage__main {
