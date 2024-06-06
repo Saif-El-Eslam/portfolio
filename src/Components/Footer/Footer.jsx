@@ -12,10 +12,10 @@ function Footer() {
           rel="noreferrer"
           className="Footer__link"
         >
-          Brittany Chiang Portfolio
+          Brittany Chiang Portfolio.
         </a>{" "}
-        and coded in Visual Studio Code by {Info.copyWrite.code}
-        Built with React and hosted on Vercel.
+        Coded in Visual Studio Code by {Info.copyWrite.code} Built with React
+        and hosted on Vercel.
       </p>
     </div>
   );
