@@ -46,7 +46,7 @@ const Projects = forwardRef(({ screenWidth }, ref) => {
                   </div>
                   <img
                     className="Projects__image"
-                    src={`${process.env.PUBLIC_URL}${project.images[0]}`}
+                    src={project.images[0]}
                     alt={project.title}
                   />
                 </div>
