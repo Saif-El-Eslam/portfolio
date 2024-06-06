@@ -76,22 +76,107 @@
   ],
   "projects": [
     {
-      "title": "Harvard Business School Next.js Site",
-      "description": "this the project description. Other details can be added here. this the project description. Other details can be added here. this the project description. Other details can be added here.",
-      "url": "https://www.vodafone.com.eg/",
-      "year": "2018",
-      "made_at": "Vodafone",
-      "skills": [],
-      "images": ["/projects/W0.PNG"]
+      "title": "BuyMe E-commerce Platform",
+      "description": "Developed an e-commerce platform with MERN stack; integrated Cloudinary for images, featuring distinct admin/customer UIs. Introduced functionalities such as order tracking, secure password reset via SendGrid, and a user-friendly shopping experience, showcasing full-stack development skills and user-centric design proficiency.",
+      "url": "https://github.com/Saif-El-Eslam/buyme",
+      "year": "2024",
+      "made_at": "Self-directed Learning",
+      "skills": [
+        "React.js",
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+        "SendGrid"
+      ],
+      "images": ["/projects/buyme.png"],
+      "view": true
     },
     {
-      "title": "Vodafone Egypt",
-      "description": "this the project description. Other details can be added here. this the project description. Other details can be added here.",
-      "url": "",
-      "year": "2018",
-      "made_at": "Vodafone",
-      "skills": ["HTML", "CSS", "JavaScript", "React"],
-      "images": ["/projects/W0.PNG"]
+      "title": "Bus Finder",
+      "description": "Developed a comprehensive Bus Share platform as a demo project for a master's degree student.  Led front-end development with ReactJS and Mapbox-GL. Crafted the backend infrastructure with Python and Flask with smooth interactions for admins, drivers, and riders. Adms can efficiently manage drivers, while drivers can visualize routes and access trip details. Riders enjoy a user-friendly interface for requesting trips and accessing trip information.",
+      "url": "https://github.com/Saif-El-Eslam/route-optimization",
+      "year": "2023",
+      "made_at": "Freelance",
+      "skills": ["React.js", "Python", "Flask", "Mapbox", "MongoDB"],
+      "images": ["/projects/busfinder.png"],
+      "view": true
+    },
+    {
+      "title": "Graduation Project: Opinion Pilot",
+      "description": "Developed an advanced Opinion Mining application for my graduation project at Cairo University to extract insights, quotes, and sentiment from news articles, blogs, and social media. Designed a user-friendly website for analysis and comparison of opinions on specific topics, utilizing NLP techniques for meaningful insights. ",
+      "url": "https://github.com/Saif-El-Eslam/GP-opinion-mining",
+      "year": "2023",
+      "made_at": "Cairo University",
+      "skills": ["NLP", "React.js", "Python", "Flask", "Machine Learning"],
+      "images": ["/projects/opinionpilot.png"],
+      "view": true
+    },
+    {
+      "title": "World Cup Match Reservation System",
+      "description": "Developed a dynamic World Cup Match Reservation System using the MERN stack. This user-friendly platform enables seamless sports reservation, allowing users to explore teams, match schedules, and reserve seats. With robust managerial tools and role-based access controls, it ensures efficient match management and a secure experience for all users.",
+      "url": "https://github.com/hazemtarekelaswad/World-Cup-Match-Reservation-System",
+      "year": "2023",
+      "made_at": "Cairo University",
+      "skills": ["React.js", "JavaScript", "Node.js", "MongoDB", "Express.js"],
+      "images": ["/projects/worldcup.png"],
+      "view": true
+    },
+    {
+      "title": "Job Listing Website",
+      "description": "Developed a robust job listing website, leveraging the power of the MERN stack to create a seamless user experience. This comprehensive platform caters to both job seekers and employers, offering intuitive interfaces tailored to their needs. Key features include profile management, job listings, and a real-time chat system powered by WebSockets. Employers benefit from an admin page for application review and candidate communication. Agile methodologies were employed for efficient project management, ensuring progress tracking and streamlined code management through Zenhub and Git.",
+      "url": "https://github.com/emmagogogo/cs-160-group-2",
+      "year": "2022",
+      "made_at": "San Jose State University",
+      "skills": ["React", "Node.js", "WebSockets", "zenhub", "Git", "Agile"],
+      "images": [""],
+      "view": false
+    },
+    {
+      "title": "OS Scheduler",
+      "description": "Developed process generator, schedulers (HPF, RR, SRTN), and implemented buddy memory allocation in C with a team of four students on Linux platform, enhancing problem-solving abilities.",
+      "url": "https://github.com/AhmedYasser155/OS_Process_Scheduler",
+      "year": "2022",
+      "made_at": "Cairo University",
+      "skills": ["C++ Programming", "Linux", "Problem Solving"],
+      "images": [""]
+    },
+    {
+      "title": "Hospital Management Application",
+      "description": "Designed Windows-based application with different interfaces such as log-in interface, doctor interface, receptionist interface, and nurse interface in addition to developing and dealing with the database, adding, retrieving, updating, and deleting, using C# and SQL languages.",
+      "url": "https://github.com/Saif-El-Eslam/Hospital-Management-App",
+      "year": "2021",
+      "made_at": "Cairo University",
+      "skills": ["C#", "SQL", "Windows Forms"],
+      "images": [""]
+    },
+    {
+      "title": "Chemistry Lab - VR",
+      "description": "Developed a chemistry lab project using Unity tool. Targeted for Oculus Quest, it serves as an educational application for children. Worked on game design, game loop, and interactive features like scale, heater, containers, etc.",
+      "url": "https://github.com/MousaMohammad/VR-Chemistry-Lab",
+      "year": "2021",
+      "made_at": "Clear Pictures",
+      "skills": ["Unity", "C#", "Game Design", "VR"],
+      "images": [""]
+    },
+    {
+      "title": "Castle Battle",
+      "description": "A simulation of a battle between a castle and three types of enemies, each with its own special features. Utilized data structures including priority queue, stack, queue, and heap. Written in C++ with CMU graphics library for GUI stuff.",
+      "url": "https://github.com/Saif-El-Eslam/Castle-Game",
+      "year": "2021",
+      "made_at": "Cairo University",
+      "skills": ["C++", "Data Structures", "OOP", "Problem Solving"],
+      "images": [""]
+    },
+    {
+      "title": "Monopoly Customized Snakes and Ladders Game",
+      "description": "Developed the algorithms used in the implementation of the monopoly cards derived classes and Input/Output classes using C++ / OOP.",
+      "url": "https://github.com/Saif-El-Eslam/Snake-Ladder-with-monopoly-cards-game",
+      "year": "2020",
+      "made_at": "Cairo University",
+      "skills": ["C++", "OOP", "Problem Solving"],
+      "images": [""]
     }
   ],
   "links": [

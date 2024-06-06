@@ -121,6 +121,36 @@
   }
 }
 
+.header_1 {
+  width: 30%;
+}
+.header_2 {
+  width: 70%;
+}
+
+.AllProjects-table-link-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 640px) {
+  .AllProjects-table-link-text {
+    width: 28vw;
+  }
+
+  .header_1 {
+    width: 20%;
+  }
+  .header_2 {
+    width: 40%;
+  }
+  .header_5 {
+    width: 40%;
+  }
+}
+
 @media screen and (min-width: 770px) {
   .AllProjects {
     padding: 0 3rem;
@@ -138,5 +168,25 @@
 
   .AllProjects__wrapper {
     padding: 6rem 0;
+  }
+
+  .AllProjects-table-link-text {
+    width: 16vw;
+  }
+
+  .header_1 {
+    width: 10%;
+  }
+  .header_2 {
+    width: 20%;
+  }
+  .header_3 {
+    width: 15%;
+  }
+  .header_4 {
+    width: 30%;
+  }
+  .header_5 {
+    width: 25%;
   }
 }

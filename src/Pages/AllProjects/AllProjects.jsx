@@ -21,22 +21,21 @@ function AllProjects() {
         <table className="AllProjects__table">
           <thead>
             <tr>
-              <th>Year</th>
-              <th>Project</th>
-              {width > 1024 && <th>Made at</th>}
-              {width > 1024 && <th>Built with</th>}
-              {width > 640 && <th>Link</th>}
+              <th className="header_1">Year</th>
+              <th className="header_2">Project</th>
+              {width > 1024 && <th className="header_3">Made at</th>}
+              {width > 1024 && <th className="header_4">Built with</th>}
+              {width > 640 && <th className="header_5">Link</th>}
             </tr>
           </thead>
           <tbody>
-            <tr className="separator"></tr>
             {Info.projects &&
               Info.projects.map((project, index) => (
                 <tr key={index}>
-                  <td>
+                  <td className="header_1">
                     <p>{project.year}</p>
                   </td>
-                  <td>
+                  <td className="header_2">
                     {width < 640 && project.url ? (
                       <a
                         href={project.url}
@@ -57,12 +56,12 @@ function AllProjects() {
                     )}
                   </td>
                   {width > 1024 && (
-                    <td>
+                    <td className="header_3">
                       <p>{project.made_at}</p>
                     </td>
                   )}
                   {width > 1024 && (
-                    <td>
+                    <td className="header_4">
                       <ul className="AllProjects__skills">
                         {project.skills.map((skill, index) => (
                           <li
@@ -76,7 +75,7 @@ function AllProjects() {
                     </td>
                   )}
                   {width > 640 && (
-                    <td>
+                    <td className="header_5">
                       {project.url && (
                         <a
                           href={project.url}
@@ -84,7 +83,9 @@ function AllProjects() {
                           rel="noreferrer"
                           className="AllProjects-table-link"
                         >
-                          <p>{project.url}</p>
+                          <span className="AllProjects-table-link-text">
+                            {project.url}
+                          </span>
                           <span className="AllProjects-table-icon">
                             <img
                               src="/icons/up-right-arrow.png"
