@@ -46,7 +46,7 @@ const Projects = forwardRef(({ screenWidth }, ref) => {
                   </div>
                   <img
                     className="Projects__image"
-                    src={project.images[0]}
+                    src="/icons/up-right-arrow.png"
                     alt={project.title}
                   />
                 </div>
