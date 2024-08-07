@@ -2,11 +2,11 @@
 
 import "@app/globals.css";
 import { useState, useEffect, useRef } from "react";
-import MainHeader from "@/Components/MainHeader/MainHeader";
-import About from "@/Components/About/About";
-import Experience from "@/Components/Experience/Experience";
-import Projects from "@/Components/Projects/Projects";
-import Footer from "@/Components/Footer/Footer";
+import MainHeader from "../Components/MainHeader/MainHeader";
+import About from "../Components/About/About";
+import Experience from "../Components/Experience/Experience";
+import Projects from "../Components/Projects/Projects";
+import Footer from "../Components/Footer/Footer";
 
 // break points 1024, 640
 

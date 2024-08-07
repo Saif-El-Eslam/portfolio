@@ -1,6 +1,6 @@
 "use client";
 import "./About.css";
-import Info from "@/Info/Info.json";
+import Info from "../../Info/Info.json";
 import React, { forwardRef } from "react";
 
 const About = forwardRef(({ screenWidth }, ref) => {

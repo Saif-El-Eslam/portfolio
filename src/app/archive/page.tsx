@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 function AllProjects() {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(1028);
 
   useEffect(() => {
     setWidth(window.innerWidth);
