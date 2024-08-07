@@ -22,9 +22,9 @@ function Page() {
   const handleScroll = () => {
     // const paddingHeight = 96;
 
-    const section1Top = section1Ref?.current?.offsetTop;
-    const section2Top = section2Ref?.current?.offsetTop;
-    const section3Top = section3Ref?.current?.offsetTop;
+    const section1Top = section1Ref?.current?.offsetTop ?? 0;
+    const section2Top = section2Ref?.current?.offsetTop ?? 0;
+    const section3Top = section3Ref?.current?.offsetTop ?? 0;
 
     const scrollPosition = window.scrollY + window.innerHeight / 3;
 
