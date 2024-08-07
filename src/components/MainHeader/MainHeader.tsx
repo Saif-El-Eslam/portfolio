@@ -140,7 +140,7 @@ function MainHeader({ screenWidth, activeSection }) {
               <a href={link.url} target="_blank" rel="noreferrer">
                 <Image
                   src={link.icon}
-                  alt={link.name}
+                  alt={link.title}
                   className="object-cover"
                   fill
                 />
