@@ -5,7 +5,13 @@ import { Link } from "react-scroll";
 import { useState } from "react";
 import Image from "next/image";
 
-function MainHeader<Number, String>({ screenWidth, activeSection }) {
+function MainHeader({
+  screenWidth,
+  activeSection,
+}: {
+  screenWidth: number;
+  activeSection: String;
+}) {
   const [hoveredItem, setHoveredItem] = useState<String | null>(null);
 
   const handleMouseEnter = (item: String) => {
