@@ -3,7 +3,12 @@ import "./About.css";
 import Info from "../../Info/Info.json";
 import React, { forwardRef } from "react";
 
-const About = forwardRef(({ screenWidth }, ref) => {
+const About = forwardRef<
+  HTMLDivElement,
+  {
+    screenWidth: number;
+  }
+>(({ screenWidth }, ref) => {
   return (
     <section id="about" className="About" ref={ref}>
       {screenWidth < 1024 && (

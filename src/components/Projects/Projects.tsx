@@ -4,7 +4,12 @@ import Info from "../../Info/Info.json";
 import React, { forwardRef } from "react";
 import Image from "next/image";
 
-const Projects = forwardRef(({ screenWidth }, ref) => {
+const Projects = forwardRef<
+  HTMLDivElement,
+  {
+    screenWidth: number;
+  }
+>(({ screenWidth }, ref) => {
   return (
     <section id="projects" className="Projects" ref={ref}>
       {screenWidth < 1024 && (
