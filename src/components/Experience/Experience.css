@@ -1,0 +1,146 @@
+.Experience {
+  margin-bottom: 4rem;
+}
+
+.Experience__header {
+  padding: 1.2rem 1.5rem;
+  margin: 0 -1.5rem 1rem;
+}
+
+.Experience__header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.Experience__date {
+  margin: 0.25rem 0 0.5rem 0;
+}
+.Experience__date p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.Experience__container {
+  margin-bottom: 3rem;
+
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.Experience__resume a:hover {
+  transition: all ease 0.3s;
+  color: #5eead4;
+
+  .arrow-up {
+    transform: translate(2px, -4px);
+    transition: all ease 0.3s;
+  }
+  .arrow-down {
+    transform: translate(2px, 4px);
+    transition: all ease 0.3s;
+  }
+}
+
+.icon__container {
+  width: 0.9rem;
+  display: inline-block;
+  height: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.Experience__paragraph {
+  margin-top: 0.5rem;
+}
+
+.Experience__skills {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Experience__skill__wrapper {
+  padding: 0.3rem 0.9rem;
+  background-color: #122b39;
+  color: #5eead4;
+  border-radius: 5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Experience__resume {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.Experience__link:hover {
+  color: #5eead4;
+  transition: all ease 0.3s;
+
+  .arrow-up {
+    transform: translate(2px, -4px);
+    transition: all ease 0.3s;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .Experience__container {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .Experience__date {
+    grid-column: span 2;
+  }
+  .Experience__content {
+    grid-column: span 6;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .Experience {
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Experience {
+    margin-bottom: 9rem;
+  }
+
+  .Experience__list:hover .Experience__container {
+    transition: all ease 0.3s;
+
+    opacity: 0.5;
+  }
+
+  .Experience__list .Experience__container:hover {
+    opacity: 1;
+
+    transition: all ease 0.3s;
+    cursor: pointer;
+    background-color: rgba(18, 43, 57, 0.3);
+    box-shadow: 0 0 3rem 1rem rgba(38, 54, 92, 0.1);
+
+    .Experience__link {
+      transition: all ease 0.3s;
+      color: #5eead4;
+    }
+    .arrow-up {
+      transform: translate(2px, -4px);
+      transition: all ease 0.3s;
+    }
+  }
+
+  .Experience__link__hover {
+    transition: all ease 0.3s;
+    color: #5eead4;
+  }
+}

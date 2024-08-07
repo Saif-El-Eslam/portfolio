@@ -1,0 +1,149 @@
+/* /////////////////////////////////////////////////////// */
+/* ////////////////// GENERAL STYLING //////////////////// */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0f172a;
+  color: #e7e7e7;
+}
+
+img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  color: #a7a5b7;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* /////////////////////////////////////////////////////// */
+
+.MainPage {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+  color: #e7e7e7;
+  padding: 3rem 1.5rem;
+  margin: auto;
+
+  max-width: 80rem;
+}
+
+.MainPage__main {
+  padding-top: 6rem;
+}
+
+footer {
+  padding-bottom: 4rem;
+}
+
+/* .MainPage__header {
+  } */
+
+/* colors */
+/* 
+      #8E9EBA -- gray
+      #0f172a -- dark blue
+      #e7e7e7 -- white
+      #122B39 -- dark green
+      #5eead4 -- light green
+  */
+
+/* @media screen and (min-width: 640px) {
+  } */
+
+@media screen and (min-width: 770px) {
+  .MainPage {
+    padding: 5rem 3rem;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .MainPage {
+    padding: 0rem 6rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+
+    position: relative;
+
+    min-height: 100vh;
+  }
+
+  .MainPage__header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+    padding: 6rem 0;
+  }
+
+  .MainPage__main {
+    width: 50%;
+    padding: 6rem 0;
+  }
+}

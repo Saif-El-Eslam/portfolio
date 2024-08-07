@@ -1,0 +1,136 @@
+.Projects {
+  margin-bottom: 4rem;
+}
+
+.Projects__header {
+  padding: 1.2rem 1.5rem;
+  margin: 0 -1.5rem 1rem;
+}
+
+.Projects__header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.Projects__container {
+  margin-bottom: 3rem;
+
+  display: grid;
+  gap: 1rem;
+
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.Projects__paragraph {
+  margin-top: 0.5rem;
+}
+
+.Projects__image {
+  height: 10%;
+  min-width: 7rem;
+  max-width: 13rem;
+  min-height: 6rem;
+  /* max-height: 7rem; */
+}
+
+.Project__skills {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Project__skill__wrapper {
+  padding: 0.3rem 0.9rem;
+  background-color: #122b39;
+  color: #5eead4;
+  border-radius: 5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Projects__archive {
+  margin-top: 3rem;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.Projects__archive a:hover {
+  color: #5eead4;
+  transition: all ease 0.3s;
+
+  .arrow-up {
+    transform: translate(2px, -4px);
+    transition: all ease 0.3s;
+  }
+}
+
+.Projects__link:hover {
+  color: #5eead4;
+  transition: all ease 0.3s;
+
+  .arrow-up {
+    transform: translate(2px, -4px);
+    transition: all ease 0.3s;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .Projects__container {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .Projects__image {
+    grid-column: span 2;
+    order: 1;
+    min-height: 4.55rem;
+  }
+  .Projects__content {
+    grid-column: span 6;
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .Projects {
+    margin-bottom: 6rem;
+  }
+  .Projects__image {
+    min-height: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Projects {
+    margin-bottom: 9rem;
+  }
+
+  .Projects__list:hover .Projects__container {
+    opacity: 0.5;
+  }
+
+  .Projects__list .Projects__container:hover {
+    transition: all ease 0.3s;
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(18, 43, 57, 0.3);
+    box-shadow: 0 0 3rem 1rem rgba(38, 54, 92, 0.1);
+
+    .Projects__link {
+      transition: all ease 0.3s;
+      color: #5eead4;
+    }
+    .arrow-up {
+      transform: translate(2px, -4px);
+      transition: all ease 0.3s;
+    }
+  }
+
+  .Projects__image {
+    min-height: 4.5rem;
+  }
+}
