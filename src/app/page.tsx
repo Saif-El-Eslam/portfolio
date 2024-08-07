@@ -15,9 +15,9 @@ function Page() {
 
   const [activeSection, setActiveSection] = useState("about");
 
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
+  const section1Ref = useRef<HTMLDivElement>(null);
+  const section2Ref = useRef<HTMLDivElement>(null);
+  const section3Ref = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     // const paddingHeight = 96;
