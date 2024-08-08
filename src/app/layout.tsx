@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
-  style: ["normal"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
