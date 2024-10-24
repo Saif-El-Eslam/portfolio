@@ -15,7 +15,7 @@
       "location": "Cairo, Egypt (Remote)",
       "from": "Aug 2023",
       "to": "Present",
-      "description": "Developed and maintained website features, ensuring a seamless user experience while leveraging our company's expertise in AI technology. Integrated features of our model 'atun' through seamless integration with the web, providing users with enhanced functionality and a more personalized experience. Demonstrated problem-solving skills by efficiently identifying and rectifying bugs, ensuring optimal functionality. Prioritized code reliability and maintainability by meticulously writing tests and documentation for various components of the app.",
+      "description": "As a Full-stack Developer at Avidbeam since September 2023, I have contributed to backend and frontend development using Ruby on Rails, MongoDB, and React. I utilized Docker and Kubernetes for deployment, ensuring efficient application management. I developed features such as a proto generator app to streamline workflows and integrated real-time data processing capabilities using Sidekiq and RabbitMQ. Additionally, I focus on ensuring code reliability through testing with RSpec and RSwag, while collaborating with cross-functional teams to troubleshoot issues and enhance user experience.",
       "company_url": "https://www.avidbeam.com/",
       "skills": [
         "ReactJS",
@@ -31,6 +31,23 @@
         "gRPC",
         "RSpec",
         "RSwag"
+      ]
+    },
+    {
+      "title": "External Teaching Assistant",
+      "company": "Cairo University Faculty of Engineering",
+      "location": "Giza, Egypt",
+      "from": "Sep 2024",
+      "to": "Present",
+      "description": "Assist in teaching the Database course by preparing instructional materials, guiding students through complex concepts, and facilitating lab sessions. Provide support in grading assignments and exams, and help foster an engaging learning environment.",
+      "company_url": "https://eng.cu.edu.eg/",
+      "skills": [
+        "Teaching",
+        "Student Engagement",
+        "Curriculum Development",
+        "Database Management",
+        "Communication",
+        "Problem Solving"
       ]
     },
     {
