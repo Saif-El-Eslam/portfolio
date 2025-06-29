@@ -15,7 +15,7 @@
       "location": "Cairo, Egypt (Remote)",
       "from": "Aug 2023",
       "to": "Present",
-      "description": "As a Full-stack Developer at Avidbeam since September 2023, I have contributed to backend and frontend development using Ruby on Rails, MongoDB, and React. I utilized Docker and Kubernetes for deployment, ensuring efficient application management. I developed features such as a proto generator app to streamline workflows and integrated real-time data processing capabilities using Sidekiq and RabbitMQ. Additionally, I focus on ensuring code reliability through testing with RSpec and RSwag, while collaborating with cross-functional teams to troubleshoot issues and enhance user experience.",
+      "description": "At Avidbeam, I’ve contributed to both backend and frontend development using Ruby on Rails, React, Next.js, and MongoDB. I led a major architectural redesign, shifting the system from a standalone cluster to a federated cluster-of-clusters model, enabling scalable and hierarchical data federation. I also replaced the legacy authentication system with Authentik, adding support for inter-cluster authentication, LDAP, and OAuth integrations. Additionally, I successfully migrated 50–70 million records with zero downtime during a major system upgrade and built a proto generator app to streamline development workflows. I work with tools like Docker, Kubernetes, Sidekiq, sneekers, and RabbitMQ for deployment and background processing, and ensure code quality through testing with RSpec and RSwag. My role includes active collaboration across teams to maintain performance, resolve critical issues, and enhance user experience.",
       "company_url": "https://www.avidbeam.com/",
       "skills": [
         "ReactJS",
