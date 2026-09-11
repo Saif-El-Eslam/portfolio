@@ -1,0 +1,182 @@
+.AllExperience {
+  min-height: 100vh;
+}
+
+.AllExperience__wrapper {
+  width: min(calc(100% - 2rem), 80rem);
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.AllExperience__hero {
+  display: grid;
+  align-items: end;
+  gap: 3rem;
+  padding: 8rem 0 4rem;
+}
+
+.AllExperience__eyebrow {
+  margin-bottom: 1.25rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.AllExperience__hero h1 {
+  max-width: 8ch;
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 730;
+  letter-spacing: -0.07em;
+  line-height: 0.86;
+}
+
+.AllExperience__hero h1 em {
+  display: block;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.AllExperience__heroAside > p {
+  max-width: 29rem;
+  font-size: 1rem;
+}
+
+.AllExperience__heroAside dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0 0;
+}
+
+.AllExperience__heroAside dl div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.AllExperience__heroAside dt {
+  color: var(--paper);
+  font-size: 1.25rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.AllExperience__heroAside dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.AllExperience__timeline {
+  padding: 4rem 0 6rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.AllExperience__timelineHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.AllExperience__timelineHeader h2 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.AllExperience__timelineHeader p {
+  display: none;
+  max-width: 22rem;
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.AllExperience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.AllExperience__list > li {
+  position: relative;
+}
+
+.AllExperience__marker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 0 0.55rem 0.35rem;
+}
+
+.AllExperience__marker span {
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.AllExperience__marker i {
+  width: 2rem;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.AllExperience__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.AllExperience__footer a,
+.AllExperience__footer p {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.AllExperience__footer a:hover {
+  color: var(--accent);
+}
+
+@media screen and (min-width: 650px) {
+  .AllExperience__wrapper {
+    width: min(calc(100% - 5rem), 80rem);
+  }
+
+  .AllExperience__hero {
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: clamp(3rem, 10vw, 9rem);
+    padding: 9rem 0 5rem;
+  }
+
+  .AllExperience__timelineHeader p {
+    display: block;
+  }
+
+  .AllExperience__list > li {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .AllExperience__marker {
+    display: grid;
+    align-content: start;
+    justify-items: center;
+    gap: 0.6rem;
+    padding: 1.25rem 0 0;
+  }
+
+  .AllExperience__marker i {
+    width: 1px;
+    height: calc(100% - 1.5rem);
+    min-height: 4rem;
+  }
+}

@@ -1,101 +1,287 @@
 {
   "name": "Saifeleslam Elsayed",
-  "title": "Web Developer",
+  "title": "Full Stack Engineer",
   "email": "saifeleslamelsayed@gmail.com",
-  "summary": "Passionate tech enthusiast coder adept at creating user-friendly, cutting-edge software solutions.",
+  "summary": "I build secure web platforms, distributed backend systems, real-time workflows, and polished user experiences.",
   "about": {
-    "past": "Reflecting on my journey, it's been a wild ride! From grinding through lectures at Cairo University to diving into the Silicon Valley scene at San José State University, I've been on a quest for knowledge. Snagged a sweet scholarship too! Along the way, I've tinkered with courses and lent a hand with many volunteering work, all in the pursuit of leveling up my tech skills.",
-    "present": "Currently, I'm knee-deep in the tech world, soaking up every bit of knowledge I can get my hands on at AvidBeam. It's been a whirlwind of excitement! I've spearheaded some pretty cool projects like the Shopping Website and Bus Finder. Not to mention, I've clocked in some serious intern hours at spots like Hoopoe Digital and Bosta. Now, I'm itching for more challenges to tackle—bring 'em on!",
-    "hobbies": "When I'm not pounding away at the keyboard, you'll catch me pumping iron at the gym, trying to keep this body in shape! And yeah, I've got a bit of a soft spot for documentaries and news. Especially hooked on anything that dives into the nitty-gritty of economics, history or news. Gotta keep those brain gears turning!"
+    "past": "My path into software engineering started at Cairo University and widened through a scholarship experience at San José State University. Internships, volunteer work, and a lot of hands-on building gave me a practical foundation in web engineering—and taught me to value curiosity, ownership, and clear thinking.",
+    "present": "Today, I work across the stack on production systems at AvidBeam and Thaat. My work spans React and Ruby on Rails applications, distributed services, real-time and asynchronous workflows, multi-tenant data systems, cloud infrastructure, and third-party integrations. I also build and deploy freelance products, collaborating closely with designers and engineers to turn complete user journeys into reliable software.",
+    "hobbies": "Away from the keyboard, I spend time at the gym and follow documentaries and current affairs, especially economics and history. Both are good reminders that every system—technical or otherwise—has people and tradeoffs behind it."
   },
   "experience": [
     {
-      "title": "Full-stack Developer",
-      "company": "Avidbeam Technologies",
+      "id": "avidbeam-technologies",
+      "company": "AvidBeam Technologies",
       "location": "Cairo, Egypt (Remote)",
       "from": "Aug 2023",
       "to": "Present",
-      "description": "At Avidbeam, I’ve contributed to both backend and frontend development using Ruby on Rails, React, Next.js, and MongoDB. I led a major architectural redesign, shifting the system from a standalone cluster to a federated cluster-of-clusters model, enabling scalable and hierarchical data federation. I also replaced the legacy authentication system with Authentik, adding support for inter-cluster authentication, LDAP, and OAuth integrations. Additionally, I successfully migrated 50–70 million records with zero downtime during a major system upgrade and built a proto generator app to streamline development workflows. I work with tools like Docker, Kubernetes, Sidekiq, sneekers, and RabbitMQ for deployment and background processing, and ensure code quality through testing with RSpec and RSwag. My role includes active collaboration across teams to maintain performance, resolve critical issues, and enhance user experience.",
+      "overview": "Build and scale AI-powered video analytics systems across the React and Ruby on Rails stack, with a focus on distributed architecture, real-time workflows, multi-tenancy, search, and high-volume data processing.",
       "company_url": "https://www.avidbeam.com/",
       "skills": [
-        "ReactJS",
-        "NextJS",
-        "Chakra UI",
         "Ruby on Rails",
-        "WebSockets",
+        "React.js",
         "MongoDB",
-        "elasticsearch",
-        "kubernetes",
-        "Docker",
-        "protobuff",
+        "Elasticsearch",
+        "Sidekiq",
+        "Action Cable",
         "gRPC",
-        "RSpec",
-        "RSwag"
+        "Multi-tenancy"
+      ],
+      "roles": [
+        {
+          "title": "Full Stack Engineer",
+          "employment_type": "Full-time",
+          "from": "Jul 2024",
+          "to": "Present",
+          "highlights": [
+            "Develop advanced alarm management, including custom sounds, preferences, authorization, feedback, archiving, and restoration.",
+            "Built timezone-aware, multilingual profile-history reporting and asynchronous exports for face and vehicle profiles.",
+            "Architect multi-tenancy and cluster federation across MongoDB, Elasticsearch, Action Cable, workers, and gRPC services.",
+            "Engineer resilient Sidekiq and resumable bulk-processing pipelines with retries, recovery, and real-time progress.",
+            "Modernize service orchestration and integrate MQTT, NATS, Kafka, webhooks, and Authentik.",
+            "Optimize high-volume APIs with Redis caching, database indexes, improved search queries, and reduced serialization work."
+          ],
+          "skills": [
+            "Ruby on Rails",
+            "React.js",
+            "Sidekiq",
+            "Elasticsearch",
+            "gRPC",
+            "Kafka",
+            "Redis",
+            "Docker"
+          ]
+        },
+        {
+          "title": "Full Stack Engineer",
+          "employment_type": "Part-time",
+          "from": "Sep 2023",
+          "to": "Jul 2024",
+          "highlights": [
+            "Developed detection and alarm archiving and recovery across MongoDB and Elasticsearch.",
+            "Built real-time analytics, notifications, and resumable media-processing workflows with Action Cable and background workers.",
+            "Designed a resumable production migration for more than 70 million records using batched Sidekiq jobs and a dedicated reindexing queue.",
+            "Expanded role-based access control and created automated API tests and OpenAPI documentation.",
+            "Added Sidekiq monitoring and improved reliability across background processing and search indexing."
+          ],
+          "skills": [
+            "Ruby on Rails",
+            "React.js",
+            "MongoDB",
+            "Elasticsearch",
+            "Sidekiq",
+            "Action Cable",
+            "RSpec",
+            "OpenAPI"
+          ]
+        },
+        {
+          "title": "Full Stack Engineer",
+          "employment_type": "Internship",
+          "from": "Aug 2023",
+          "to": "Sep 2023",
+          "highlights": [
+            "Built responsive interfaces with React.js and Chakra UI.",
+            "Developed a generator for creating and parsing Protocol Buffer files.",
+            "Implemented Ruby on Rails and MongoDB features and diagnosed issues across the stack."
+          ],
+          "skills": [
+            "Ruby on Rails",
+            "React.js",
+            "Chakra UI",
+            "MongoDB",
+            "Protocol Buffers"
+          ]
+        }
       ]
     },
     {
-      "title": "External Teaching Assistant",
-
-      "location": "Giza, Egypt",
-      "from": "Sep 2024",
-      "to": "Jul 2025",
-      "description": "Assist in teaching the Database and the Software Engineering courses by preparing instructional materials, guiding students through complex concepts, and facilitating lab sessions. Provide support in grading assignments and exams, and help foster an engaging learning environment.",
-      "company_url": "https://eng.cu.edu.eg/",
+      "id": "thaat",
+      "company": "ذات للخدمات الطبية المنزلية",
+      "location": "Riyadh, Saudi Arabia (Remote)",
+      "from": "Jul 2026",
+      "to": "Present",
+      "overview": "Own the end-to-end development of Thaat's healthcare platform, from responsive product interfaces and CMS tools to backend services, cloud infrastructure, and third-party integrations.",
+      "company_url": "https://thaat.co/",
       "skills": [
-        "Teaching",
-        "Student Engagement",
-        "Curriculum Development",
-        "Database Management",
-        "Communication",
-        "Problem Solving"
+        "Ruby on Rails",
+        "Full-Stack Development",
+        "REST APIs",
+        "AWS",
+        "Docker",
+        "GitHub Actions",
+        "Gallabox"
+      ],
+      "roles": [
+        {
+          "title": "Full Stack Engineer",
+          "employment_type": "Freelance",
+          "from": "Jul 2026",
+          "to": "Present",
+          "highlights": [
+            "Own frontend and Ruby on Rails backend development across Thaat's platform.",
+            "Build CMS products and REST APIs for patient applications, healthcare providers, branches, and internal operations.",
+            "Design the responsive medical tracking map and its location-based services.",
+            "Manage AWS deployments with Docker, GitHub Actions, ECR, EC2, and S3.",
+            "Integrate Gallabox automation, payment gateways, and push notifications."
+          ],
+          "skills": [
+            "Ruby on Rails",
+            "REST APIs",
+            "AWS",
+            "Docker",
+            "GitHub Actions",
+            "ECR",
+            "EC2",
+            "S3"
+          ]
+        }
       ]
     },
     {
-      "title": "Web Development Intern",
+      "id": "hoopoe-digital",
       "company": "Hoopoe Digital",
       "location": "Cairo, Egypt",
       "from": "Jul 2022",
       "to": "Sep 2022",
-      "description": "Played an integral role in the creation of an analytics platform and an indoor mapping application, contributing innovative solutions. Engineered intuitive user interfaces by constructing dynamic forms for map administrators, empowering seamless style and information customization. Leveraged advanced data visualization techniques with D3.js, building reusable graph components, enabling comprehensive data analysis and visualization.",
+      "overview": "Contributed to an analytics platform and indoor mapping application, creating configurable interfaces and reusable data visualizations.",
       "company_url": "https://www.hoopoe.digital/",
       "skills": [
-        "HTML & CSS",
-        "JavaScript",
-        "TypeScript",
         "React.js",
+        "TypeScript",
         "D3.js",
         "Data Visualization",
-        "Data Analysis",
-        "GitLab",
-        "Trello",
         "Agile"
+      ],
+      "roles": [
+        {
+          "title": "Web Development Intern",
+          "employment_type": "Internship",
+          "from": "Jul 2022",
+          "to": "Sep 2022",
+          "highlights": [
+            "Helped build an analytics platform and an indoor mapping application.",
+            "Created dynamic forms for map administrators to configure styles and information.",
+            "Built reusable D3.js graph components for data analysis and visualization."
+          ],
+          "skills": [
+            "HTML & CSS",
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "D3.js",
+            "GitLab",
+            "Trello"
+          ]
+        }
       ]
     },
     {
-      "title": "Quality Control Intern",
+      "id": "bosta",
       "company": "Bosta",
       "location": "Giza, Egypt",
-      "from": "Jul 2022",
-      "to": "Sep 2022",
-      "description": "Implemented rigorous testing methodologies across web and mobile applications and APIs, ensuring optimal performance and reliability in an Agile environment. Documented test cases and results in Jira, facilitating efficient bug identification and resolution processes. Conducted API testing using Postman and MongoDB queries with 3T Studio, ensuring seamless integration and functionality across platforms.",
-      "company_url": "https://bosta.co/ar-eg/home",
-      "skills": ["Agile", "Jira", "Postman", "MongoDB", "3T Studio"]
-    },
-    {
-      "title": "Software Engineer Intern",
-      "company": "Clear Pictures",
-      "location": "Cairo Egypt",
       "from": "Jul 2021",
       "to": "Sep 2021",
-      "description": "Co-developed a VR interactive chemistry lab application for Oculus Quest, focusing on game design and object functionality. Gained proficiency in Unity for game object design and C# for adding interactive features.",
+      "overview": "Tested web, mobile, and API products in an Agile delivery environment, helping teams identify issues and ship more reliable releases.",
+      "company_url": "https://bosta.co/ar-eg/home",
+      "skills": ["Quality Control", "Agile", "Jira", "Postman", "MongoDB"],
+      "roles": [
+        {
+          "title": "Quality Control Intern",
+          "employment_type": "Internship",
+          "from": "Jul 2021",
+          "to": "Sep 2021",
+          "highlights": [
+            "Applied structured testing across web applications, mobile applications, and APIs.",
+            "Documented test cases and results in Jira and tested APIs with Postman.",
+            "Validated MongoDB data using 3T Studio."
+          ],
+          "skills": ["Agile", "Jira", "Postman", "MongoDB", "3T Studio"]
+        }
+      ]
+    },
+    {
+      "id": "clear-pictures",
+      "company": "Clear Pictures",
+      "location": "Cairo, Egypt",
+      "from": "Jul 2021",
+      "to": "Sep 2021",
+      "overview": "Co-developed an interactive virtual-reality chemistry lab for Oculus Quest, focusing on educational interactions and game-object behavior.",
       "company_url": "https://clearpictures.tv/",
-      "skills": ["Unity", "C#"]
+      "skills": ["Unity", "C#", "Virtual Reality", "Game Design"],
+      "roles": [
+        {
+          "title": "Software Engineer Intern",
+          "employment_type": "Internship",
+          "from": "Jul 2021",
+          "to": "Sep 2021",
+          "highlights": [
+            "Co-developed an interactive VR chemistry lab for Oculus Quest.",
+            "Used Unity for game-object design and C# to implement educational interactions."
+          ],
+          "skills": ["Unity", "C#", "Oculus Quest"]
+        }
+      ]
     }
   ],
   "projects": [
     {
+      "title": "Diet & Wellness Platform",
+      "description": "Backend engineering and production delivery for a comprehensive diet and wellness platform.",
+      "highlights": [
+        "Built secure REST APIs for assessments, personalized results, recipes, articles, and subscriptions.",
+        "Implemented JWT and Google authentication, role-based access, verification, and account recovery.",
+        "Integrated Paymob payments, Cloudinary uploads, and bilingual content.",
+        "Deployed with Nginx, PM2, Cloudflare, HTTPS, and GitHub Actions."
+      ],
+      "url": "https://diet-n-wellness.com/ar",
+      "year": "2026",
+      "made_at": "Diet and Wellness",
+      "skills": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Paymob",
+        "Cloudinary",
+        "Nginx",
+        "GitHub Actions"
+      ],
+      "images": ["/project-assets/dietwellness.svg"],
+      "view": true
+    },
+    {
+      "title": "Mayorca",
+      "description": "End-to-end frontend delivery for a responsive, multilingual ceramics commerce experience.",
+      "highlights": [
+        "Integrated REST APIs for catalogs, search, offers, sellers, news, and order workflows.",
+        "Added English, Arabic, and French localization with RTL and persistent themes.",
+        "Built advanced filtering, carousels, map search, validation, and order tracking.",
+        "Created reusable components and centralized state management."
+      ],
+      "url": "https://www.mayorcaceramic.net/",
+      "year": "2024–2025",
+      "made_at": "Ceramica Mayorca",
+      "skills": [
+        "Next.js",
+        "React.js",
+        "REST APIs",
+        "Internationalization",
+        "RTL",
+        "Responsive Design"
+      ],
+      "images": ["/project-assets/mayorca.ico"],
+      "view": true
+    },
+    {
       "title": "BuyMe E-commerce Platform",
-      "description": "Developed an e-commerce platform with MERN stack; integrated Cloudinary for images, featuring distinct admin/customer UIs. Introduced functionalities such as order tracking, secure password reset via SendGrid, and a user-friendly shopping experience, showcasing full-stack development skills and user-centric design proficiency.",
+      "description": "A full-stack e-commerce platform with dedicated customer and administration experiences.",
+      "highlights": [
+        "Built the platform with React, Node.js, Express.js, and MongoDB.",
+        "Integrated Cloudinary image management and SendGrid password recovery.",
+        "Delivered product management, shopping, and order-tracking workflows."
+      ],
       "url": "https://github.com/Saif-El-Eslam/buyme",
       "year": "2024",
       "made_at": "Self-directed Learning",
@@ -108,7 +294,7 @@
         "Cloudinary",
         "SendGrid"
       ],
-      "images": ["/projects/buyme.png"],
+      "images": ["/project-assets/buyme.png"],
       "view": true
     },
     {
@@ -118,7 +304,7 @@
       "year": "2023",
       "made_at": "Freelance",
       "skills": ["React.js", "Python", "Flask", "Mapbox", "MongoDB"],
-      "images": ["/projects/busfinder.png"],
+      "images": ["/project-assets/busfinder.png"],
       "view": true
     },
     {
@@ -128,7 +314,7 @@
       "year": "2023",
       "made_at": "Cairo University",
       "skills": ["NLP", "React.js", "Python", "Flask", "Machine Learning"],
-      "images": ["/projects/opinionpilot.png"],
+      "images": ["/project-assets/opinionpilot.png"],
       "view": true
     },
     {
@@ -138,7 +324,7 @@
       "year": "2023",
       "made_at": "Cairo University",
       "skills": ["React.js", "JavaScript", "Node.js", "MongoDB", "Express.js"],
-      "images": ["/projects/worldcup.png"],
+      "images": ["/project-assets/worldcup.png"],
       "view": true
     },
     {
@@ -226,7 +412,6 @@
     }
   ],
   "copyWrite": {
-    "design": "https://brittanychiang.com",
-    "code": "© 2024 Saifeleslam Elsayed."
+    "code": "© 2026 Saifeleslam Elsayed."
   }
 }

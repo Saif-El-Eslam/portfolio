@@ -1,67 +1,45 @@
 import "./MainPage.css";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import MainHeader from "../../Components/MainHeader/MainHeader";
 import About from "../../Components/About/About";
 import Experience from "../../Components/Experience/Experience";
 import Projects from "../../Components/Projects/Projects";
 import Footer from "../../Components/Footer/Footer";
 
-// break points 1024, 640
-
 function MainPage() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  window.addEventListener("resize", () => {
-    setWidth(window.innerWidth);
-  });
-
-  const [activeSection, setActiveSection] = useState("about");
-
-  const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
-  const section3Ref = useRef(null);
-
-  const handleScroll = () => {
-    // const paddingHeight = 96;
-
-    const section1Top = section1Ref.current.offsetTop;
-    const section2Top = section2Ref.current.offsetTop;
-    const section3Top = section3Ref.current.offsetTop;
-
-    const scrollPosition = window.scrollY + window.innerHeight / 3;
-
-    if (scrollPosition >= section3Top) {
-      setActiveSection("projects");
-    } else if (scrollPosition >= section2Top) {
-      setActiveSection("experience");
-    } else if (scrollPosition >= section1Top) {
-      setActiveSection("about");
-    } else {
-      setActiveSection("");
-    }
-  };
+  const [activeSection, setActiveSection] = useState("");
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleSection) setActiveSection(visibleSection.target.id);
+      },
+      { rootMargin: "-20% 0px -55%", threshold: [0, 0.25, 0.5] },
+    );
+
+    [aboutRef, experienceRef, projectsRef].forEach((sectionRef) => {
+      if (sectionRef.current) observer.observe(sectionRef.current);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="MainPage">
-      <header className="MainPage__header">
-        <MainHeader screenWidth={width} activeSection={activeSection} />
-      </header>
+    <div id="top" className="MainPage">
+      <MainHeader activeSection={activeSection} />
       <main className="MainPage__main">
-        <About screenWidth={width} ref={section1Ref} />
-        <Experience screenWidth={width} ref={section2Ref} />
-        <Projects screenWidth={width} ref={section3Ref} />
-
-        <footer className="MainPage__footer">
-          <Footer />
-        </footer>
+        <About ref={aboutRef} />
+        <Experience ref={experienceRef} />
+        <Projects ref={projectsRef} />
       </main>
+      <Footer />
     </div>
   );
 }

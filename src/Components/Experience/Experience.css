@@ -1,146 +1,109 @@
 .Experience {
-  margin-bottom: 4rem;
+  padding: 3.5rem 0 1rem;
+  border-top: 1px solid var(--line-strong);
 }
 
 .Experience__header {
-  padding: 1.2rem 1.5rem;
-  margin: 0 -1.5rem 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.Experience__index {
+  margin-bottom: 1.1rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .Experience__header h2 {
+  max-width: 12ch;
+}
+
+.Experience__headerNote {
+  max-width: 25rem;
+  align-self: end;
+}
+
+.Experience__list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+}
+
+.Experience__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.1rem;
+  margin-top: 4rem;
+  text-align: right;
+}
+
+.Experience__primaryAction {
+  width: fit-content;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 750;
 }
 
-.Experience__date {
-  margin: 0.25rem 0 0.5rem 0;
-}
-.Experience__date p {
-  font-size: 0.8rem;
-  font-weight: 600;
+.Experience__primaryAction:hover {
+  color: var(--accent);
 }
 
-.Experience__container {
-  margin-bottom: 3rem;
-
-  border-radius: 1rem;
-  padding: 1rem;
+.Experience__primaryAction:hover .arrow-up {
+  transform: translate(2px, -3px);
 }
 
-.Experience__resume a:hover {
-  transition: all ease 0.3s;
-  color: #5eead4;
+.Experience__resumeActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
 
-  .arrow-up {
-    transform: translate(2px, -4px);
-    transition: all ease 0.3s;
-  }
-  .arrow-down {
-    transform: translate(2px, 4px);
-    transition: all ease 0.3s;
-  }
+.Experience__resumeActions a {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.Experience__resumeActions a:hover {
+  color: var(--accent);
 }
 
 .icon__container {
-  width: 0.9rem;
   display: inline-block;
-  height: 0.9rem;
+  width: 0.85rem;
+  height: 0.85rem;
   margin-left: 0.5rem;
+  transition: transform 180ms ease;
 }
 
-.Experience__paragraph {
-  margin-top: 0.5rem;
-}
-
-.Experience__skills {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.Experience__skill__wrapper {
-  padding: 0.3rem 0.9rem;
-  background-color: #122b39;
-  color: #5eead4;
-  border-radius: 5rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.Experience__resume {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.Experience__link:hover {
-  color: #5eead4;
-  transition: all ease 0.3s;
-
-  .arrow-up {
-    transform: translate(2px, -4px);
-    transition: all ease 0.3s;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .Experience__container {
-    display: grid;
-    gap: 2rem;
-
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .Experience__date {
-    grid-column: span 2;
-  }
-  .Experience__content {
-    grid-column: span 6;
-  }
-}
-
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 800px) {
   .Experience {
-    margin-bottom: 6rem;
+    padding: 6rem 0 2rem;
+  }
+
+  .Experience__header {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    gap: 4rem;
+  }
+
+  .Experience__list {
+    width: min(100%, 62rem);
+    margin-top: 5rem;
+    margin-left: auto;
+  }
+
+  .Experience__actions {
+    width: min(100%, 62rem);
+    margin-left: auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .Experience {
-    margin-bottom: 9rem;
-  }
-
-  .Experience__list:hover .Experience__container {
-    transition: all ease 0.3s;
-
+  .Experience__list:hover .ExperienceCard:not(:hover) {
     opacity: 0.5;
-  }
-
-  .Experience__list .Experience__container:hover {
-    opacity: 1;
-
-    transition: all ease 0.3s;
-    cursor: pointer;
-    background-color: rgba(18, 43, 57, 0.3);
-    box-shadow: 0 0 3rem 1rem rgba(38, 54, 92, 0.1);
-
-    .Experience__link {
-      transition: all ease 0.3s;
-      color: #5eead4;
-    }
-    .arrow-up {
-      transform: translate(2px, -4px);
-      transition: all ease 0.3s;
-    }
-  }
-
-  .Experience__link__hover {
-    transition: all ease 0.3s;
-    color: #5eead4;
   }
 }

@@ -1,87 +1,93 @@
 import "./Projects.css";
 import Info from "../../Info/Info.json";
+import { Link } from "react-router-dom";
 import React, { forwardRef } from "react";
 
-const Projects = forwardRef(({ screenWidth }, ref) => {
+const Projects = forwardRef((_, ref) => {
+  const featuredProjects = Info.projects
+    .filter((project) => project.view)
+    .slice(0, 3);
+
   return (
     <section id="projects" className="Projects" ref={ref}>
-      {screenWidth < 1024 && (
-        <div className="Projects__header">
-          <h2>PROJECTS</h2>
+      <header className="Projects__header">
+        <div>
+          <p className="Projects__index">03 / Selected work</p>
+          <h2>Products built from brief to production.</h2>
         </div>
-      )}
-      <div>
-        <ul className="Projects__list">
-          {Info.projects &&
-            Info.projects.map(
-              (project, index) =>
-                project.view && (
-                  <li
-                    key={index}
-                    onClick={() => {
-                      window.open(project.url, "_blank");
-                    }}
-                  >
-                    {console.log(project)}
+        <p className="Projects__headerNote">
+          A small selection of full-stack and frontend work with real users,
+          operational constraints, and measurable outcomes.
+        </p>
+      </header>
 
-                    <div className="Projects__container">
-                      <div className="Projects__content">
-                        <h3 className="Projects__title">
-                          <a
-                            href={project?.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="Projects__link"
-                          >
-                            {project?.title}
-                            {project.url && project.url !== "" && (
-                              <span className="icon__container arrow-up">
-                                <img
-                                  src="/icons/up-right-arrow.png"
-                                  alt="up-right-arrow"
-                                />
-                              </span>
-                            )}
-                          </a>
-                        </h3>
-                        {project?.description && (
-                          <p className="Projects__paragraph">
-                            {project.description}
-                          </p>
-                        )}
-                        {project?.skills.length > 0 && (
-                          <ul className="Project__skills">
-                            {project.skills.map((skill, index) => (
-                              <li
-                                key={index}
-                                className="Project__skill__wrapper"
-                              >
-                                <div className="Project__skill">{skill}</div>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                      {project?.images && project.images.length > 0 && (
-                        <img
-                          className="Projects__image"
-                          src={project.images[0]}
-                          alt={project.title}
-                        />
-                      )}
-                    </div>
-                  </li>
-                )
-            )}
-        </ul>
-        <div className="Projects__archive">
-          <a href="/archive" target="_self" rel="noreferrer">
-            View Full Project Archive
-            <span className="icon__container arrow-up">
-              <img src="/icons/up-right-arrow.png" alt="up-right-arrow" />
-            </span>
-          </a>
-        </div>
+      <ul className="Projects__list">
+        {featuredProjects.map((project) => (
+          <li key={project.title}>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              className="Projects__card"
+            >
+              <div className="Projects__meta">
+                <span>{project.made_at}</span>
+                <span>{project.year}</span>
+              </div>
+
+              <div
+                className={`Projects__main${
+                  project.images?.[0] ? " Projects__main--withMedia" : ""
+                }`}
+              >
+                {project.images?.[0] && (
+                  <div className="Projects__media">
+                    <img src={project.images[0]} alt="" />
+                  </div>
+                )}
+
+                <div className="Projects__content">
+                  <div className="Projects__titleRow">
+                    <h3>{project.title}</h3>
+                    <span className="Projects__external" aria-hidden="true">
+                      <img src="/icons/up-right-arrow.png" alt="" />
+                    </span>
+                  </div>
+
+                  <p className="Projects__description">{project.description}</p>
+
+                  {project.highlights?.length > 0 && (
+                    <ul className="Projects__highlights">
+                      {project.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <ul className="Projects__skills">
+                    {project.skills.slice(0, 5).map((skill) => (
+                      <li key={skill}>{skill}</li>
+                    ))}
+                    {project.skills.length > 5 && (
+                      <li aria-label={`${project.skills.length - 5} more skills`}>
+                        +{project.skills.length - 5}
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div className="Projects__archive">
+        <Link to="/projects">
+          View All Projects
+          <span className="icon__container arrow-up">
+            <img src="/icons/up-right-arrow.png" alt="" />
+          </span>
+        </Link>
       </div>
     </section>
   );

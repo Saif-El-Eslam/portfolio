@@ -1,27 +1,121 @@
 .About {
-  margin-bottom: 4rem;
+  display: grid;
+  gap: 2.5rem;
+  padding: 3rem 0 4rem;
+  border-top: 1px solid var(--line-strong);
 }
 
-.About__header {
-  padding: 1.2rem 1.5rem;
-  margin: 0 -1.5rem 1rem;
+.About__index {
+  margin-bottom: 1.1rem;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.About__header h2 {
-  font-size: 1rem;
+.About__heading h2 {
+  max-width: 10ch;
+}
+
+.About__portrait {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 21rem);
+  margin: 2.5rem 0 0;
+}
+
+.About__portrait::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  transform: translate(0.7rem, 0.7rem);
+  content: "";
+}
+
+.About__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  filter: saturate(0.82) contrast(1.03);
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.About__portrait figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.65rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.About__paragraph {
-  margin-bottom: 1rem;
+.About__body {
+  display: grid;
+  gap: 2rem;
 }
 
-.About p {
-  font-size: 1rem;
+.About__lead {
+  max-width: 35rem;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.7vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.35;
 }
 
-@media screen and (min-width: 1024px) {
+.About__story {
+  display: grid;
+  gap: 1rem;
+  max-width: 38rem;
+}
+
+.About__story p {
+  font-size: 0.95rem;
+}
+
+.About__principles {
+  padding: 1.15rem;
+  border-left: 2px solid var(--accent);
+  background: rgba(12, 25, 41, 0.6);
+}
+
+.About__principles > p {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.About__principles ul {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.About__principles li {
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+@media screen and (min-width: 850px) {
   .About {
-    margin-bottom: 9rem;
+    grid-template-columns: minmax(16rem, 0.75fr) minmax(0, 1.25fr);
+    gap: clamp(4rem, 10vw, 10rem);
+    padding: 6rem 0 8rem;
+  }
+
+  .About__principles {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .About__principles ul {
+    margin-top: 0;
   }
 }

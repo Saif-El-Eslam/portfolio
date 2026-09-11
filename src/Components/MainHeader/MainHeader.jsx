@@ -1,148 +1,107 @@
 import "./MainHeader.css";
 import Info from "../../Info/Info.json";
-import { Link } from "react-scroll";
-import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
-function MainHeader({ screenWidth, activeSection }) {
-  const [hoveredItem, setHoveredItem] = useState(null);
+const navigation = ["about", "experience", "projects"];
 
-  const handleMouseEnter = (item) => {
-    setHoveredItem(item);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredItem(null);
-  };
-
+function MainHeader({ activeSection }) {
   return (
-    <div className="MainHeader">
-      <div className="MainHeader__content">
-        <h1 className="MainHeader__title">{Info.name}</h1>
-        <h2 className="MainHeader__subtitle">{Info.title}</h2>
-        <p className="MainHeader__summary">{Info.summary}</p>
+    <header className="MainHeader">
+      <nav className="MainHeader__nav" aria-label="Main navigation">
+        <a href="#top" className="MainHeader__brand" aria-label="Back to top">
+          <span className="MainHeader__mark">SE</span>
+          <span>Saifeleslam Elsayed</span>
+        </a>
 
-        {screenWidth > 1024 && (
-          <nav className="MainHeader__nav">
-            <ul>
-              <Link
-                to="about"
-                offset={-96}
-                smooth={true}
-                duration={20}
-                activeClass="active"
-              >
-                <li
-                  className="MainHeader__nav__item"
-                  onMouseEnter={() => handleMouseEnter("about")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <span>——</span>
-                  <span
-                    className={
-                      activeSection === "about" || hoveredItem === "about"
-                        ? "translate-in transition"
-                        : "translate-out transition"
-                    }
-                  >
-                    ——
-                  </span>
-                  <div
-                    className={
-                      activeSection === "about" || hoveredItem === "about"
-                        ? "transition translate-in"
-                        : "transition translate-out"
-                    }
-                  >
-                    ABOUT
-                  </div>
-                </li>
-              </Link>
+        <div className="MainHeader__navLinks">
+          {navigation.map((section) => (
+            <ScrollLink
+              key={section}
+              to={section}
+              offset={-96}
+              smooth
+              duration={350}
+              className={activeSection === section ? "is-active" : ""}
+            >
+              {section}
+            </ScrollLink>
+          ))}
+        </div>
 
-              <Link
-                to="experience"
-                smooth={true}
-                duration={20}
-                activeClass="active"
-                offset={-96}
-              >
-                <li
-                  className="MainHeader__nav__item"
-                  onMouseEnter={() => handleMouseEnter("experience")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <span>——</span>
-                  <span
-                    className={
-                      activeSection === "experience" ||
-                      hoveredItem === "experience"
-                        ? "translate-in transition"
-                        : "translate-out transition"
-                    }
-                  >
-                    ——
-                  </span>
-                  <div
-                    className={
-                      activeSection === "experience" ||
-                      hoveredItem === "experience"
-                        ? "transition translate-in"
-                        : "transition translate-out"
-                    }
-                  >
-                    EXPERIENCE
-                  </div>
-                </li>
-              </Link>
+        <a href={`mailto:${Info.email}`} className="MainHeader__contact">
+          Let&apos;s talk
+        </a>
+      </nav>
 
-              <Link
-                to="projects"
-                smooth={true}
-                duration={20}
-                activeClass="active"
-                offset={-96}
-              >
-                <li
-                  className="MainHeader__nav__item"
-                  onMouseEnter={() => handleMouseEnter("projects")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <span>——</span>
-                  <span
-                    className={
-                      activeSection === "projects" || hoveredItem === "projects"
-                        ? "translate-in transition"
-                        : "translate-out transition"
-                    }
-                  >
-                    ——
-                  </span>
-                  <div
-                    className={
-                      activeSection === "projects" || hoveredItem === "projects"
-                        ? "translate-in transition"
-                        : "translate-out transition"
-                    }
-                  >
-                    PROJECTS
-                  </div>
-                </li>
-              </Link>
-            </ul>
-          </nav>
-        )}
+      <div className="MainHeader__hero">
+        <div className="MainHeader__heroCopy">
+          <p className="MainHeader__availability">
+            <span aria-hidden="true" /> Based in Cairo · Working remotely
+          </p>
+          <p className="MainHeader__name">{Info.name}</p>
+          <h1>
+            I make complicated systems
+            <em> feel straightforward.</em>
+          </h1>
+          <p className="MainHeader__intro">
+            Full stack engineer working from distributed Rails services to the
+            React interfaces people actually touch. I care about software that
+            stays clear under pressure—for users and for the teams maintaining
+            it.
+          </p>
+
+          <div className="MainHeader__heroActions">
+            <ScrollLink to="projects" offset={-96} smooth duration={350}>
+              See selected work
+              <span aria-hidden="true">↓</span>
+            </ScrollLink>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer">
+              Open resume
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <aside
+          className="MainHeader__brief"
+          aria-label="Current role and highlights"
+        >
+          <div className="MainHeader__briefTop">
+            <p>Currently</p>
+            <span>2026</span>
+          </div>
+          <div className="MainHeader__currentRole">
+            <span>Full Stack Engineer</span>
+            <strong>AvidBeam Technologies</strong>
+            <small>Alongside freelance work with Thaat</small>
+          </div>
+          <dl className="MainHeader__facts">
+            <div>
+              <dt>70M+</dt>
+              <dd>records migrated</dd>
+            </div>
+            <div>
+              <dt>3</dt>
+              <dd>roles at AvidBeam</dd>
+            </div>
+            <div>
+              <dt>Full stack</dt>
+              <dd>product to infrastructure</dd>
+            </div>
+          </dl>
+          <div className="MainHeader__briefFooter">
+            <span>Rails</span>
+            <span>React</span>
+            <span>Distributed systems</span>
+          </div>
+        </aside>
       </div>
-      <ul className="MainHeader__links">
-        {Info?.links?.map((link, index) => {
-          return (
-            <li key={index}>
-              <a href={link.url} target="_blank" rel="noreferrer">
-                <img src={link.icon} alt={link.name} />
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+
+      <div className="MainHeader__scrollNote" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <i />
+      </div>
+    </header>
   );
 }
 

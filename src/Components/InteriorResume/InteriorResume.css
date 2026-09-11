@@ -1,0 +1,68 @@
+.InteriorResume {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.InteriorResume > div > p {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 0.67rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.InteriorResume h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.InteriorResume__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.InteriorResume__actions a {
+  min-width: 9rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+  transition: border-color 180ms ease, color 180ms ease,
+    background-color 180ms ease;
+}
+
+.InteriorResume__actions a:first-child {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.InteriorResume__actions a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.InteriorResume__actions a:first-child:hover {
+  background: transparent;
+}
+
+@media screen and (min-width: 650px) {
+  .InteriorResume {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding: 4rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .InteriorResume__actions a {
+    transition: none;
+  }
+}

@@ -1,106 +1,126 @@
-import "./AllProjects.css";
 import Info from "../../Info/Info.json";
-import { useState } from "react";
+import InteriorNav from "../../Components/InteriorNav/InteriorNav";
+import InteriorResume from "../../Components/InteriorResume/InteriorResume";
+import "./AllProjects.css";
+
+function ProjectRow({ project, index }) {
+  const content = (
+    <>
+      <div className="AllProjects__number">
+        <span>{String(index + 1).padStart(2, "0")}</span>
+        <small>{project.year}</small>
+      </div>
+
+      <div className="AllProjects__identity">
+        {project.images?.[0] ? (
+          <div className="AllProjects__thumb">
+            <img src={project.images[0]} alt="" />
+          </div>
+        ) : (
+          <div className="AllProjects__thumb AllProjects__thumb--empty">
+            {project.title.slice(0, 1)}
+          </div>
+        )}
+        <div>
+          <p>{project.made_at}</p>
+          <h2>{project.title}</h2>
+        </div>
+      </div>
+
+      <p className="AllProjects__description">{project.description}</p>
+
+      <ul className="AllProjects__skills">
+        {project.skills.slice(0, 4).map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+        {project.skills.length > 4 && <li>+{project.skills.length - 4}</li>}
+      </ul>
+
+      <span className="AllProjects__arrow" aria-hidden="true">
+        ↗
+      </span>
+    </>
+  );
+
+  return project.url ? (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noreferrer"
+      className="AllProjects__row"
+    >
+      {content}
+    </a>
+  ) : (
+    <div className="AllProjects__row AllProjects__row--static">{content}</div>
+  );
+}
 
 function AllProjects() {
-  const [width, setWidth] = useState(window.innerWidth);
-  window.addEventListener("resize", () => {
-    setWidth(window.innerWidth);
-  });
+  const years = Info.projects
+    .flatMap((project) => project.year.match(/\d{4}/g) || [])
+    .map(Number);
+  const firstYear = Math.min(...years);
+  const latestYear = Math.max(...years);
 
   return (
     <div className="AllProjects">
-      <div className="AllProjects__wrapper">
-        <a href="/" target="_self" rel="noreferrer">
-          <span className="AllProjects-icon">
-            <img src="/icons/up-left-arrow.png" alt="up-left-arrow" />
-          </span>
-          <span className="back-link">Saifeleslam Elsayed</span>
-        </a>
-        <h1 className="AllProjects__header">All Projects</h1>
-        <table className="AllProjects__table">
-          <thead>
-            <tr>
-              <th className="header_1">Year</th>
-              <th className="header_2">Project</th>
-              {width > 1024 && <th className="header_3">Made at</th>}
-              {width > 1024 && <th className="header_4">Built with</th>}
-              {width > 640 && <th className="header_5">Link</th>}
-            </tr>
-          </thead>
-          <tbody>
-            {Info.projects &&
-              Info.projects.map((project, index) => (
-                <tr key={index}>
-                  <td className="header_1">
-                    <p>{project.year}</p>
-                  </td>
-                  <td className="header_2">
-                    {width < 640 && project.url ? (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="AllProjects-table-title-link"
-                      >
-                        {project.title}
-                        <span className="AllProjects-table-icon">
-                          <img
-                            src="/icons/up-right-arrow.png"
-                            alt="up-right-arrow"
-                          />
-                        </span>
-                      </a>
-                    ) : (
-                      project.title
-                    )}
-                  </td>
-                  {width > 1024 && (
-                    <td className="header_3">
-                      <p>{project.made_at}</p>
-                    </td>
-                  )}
-                  {width > 1024 && (
-                    <td className="header_4">
-                      <ul className="AllProjects__skills">
-                        {project.skills.map((skill, index) => (
-                          <li
-                            key={index}
-                            className="AllProjects__skill__wrapper"
-                          >
-                            {skill}
-                          </li>
-                        ))}
-                      </ul>
-                    </td>
-                  )}
-                  {width > 640 && (
-                    <td className="header_5">
-                      {project.url && (
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="AllProjects-table-link"
-                        >
-                          <span className="AllProjects-table-link-text">
-                            {project.url}
-                          </span>
-                          <span className="AllProjects-table-icon">
-                            <img
-                              src="/icons/up-right-arrow.png"
-                              alt="up-right-arrow"
-                            />
-                          </span>
-                        </a>
-                      )}
-                    </td>
-                  )}
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </div>
+      <InteriorNav />
+
+      <main className="AllProjects__wrapper">
+        <header className="AllProjects__hero">
+          <div>
+            <p className="AllProjects__eyebrow">01 / Project index</p>
+            <h1>
+              Work,
+              <em> shipped.</em>
+            </h1>
+          </div>
+          <div className="AllProjects__heroAside">
+            <p>
+              Products, experiments, and systems built across backend, frontend,
+              data, and infrastructure.
+            </p>
+            <dl>
+              <div>
+                <dt>{Info.projects.length}</dt>
+                <dd>projects</dd>
+              </div>
+              <div>
+                <dt>
+                  {firstYear} &ndash; {latestYear}
+                </dt>
+                <dd>timeline</dd>
+              </div>
+            </dl>
+          </div>
+        </header>
+
+        <section
+          className="AllProjects__index"
+          aria-labelledby="project-list-title"
+        >
+          <div className="AllProjects__indexHeader">
+            <h2 id="project-list-title">All projects</h2>
+            <p>Select a row to visit the live product or source.</p>
+          </div>
+
+          <ol className="AllProjects__list">
+            {Info.projects.map((project, index) => (
+              <li key={project.title}>
+                <ProjectRow project={project} index={index} />
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <InteriorResume />
+
+        <footer className="AllProjects__footer">
+          <a href={`mailto:${Info.email}`}>Start a conversation ↗</a>
+          <p>{Info.copyWrite.code}</p>
+        </footer>
+      </main>
     </div>
   );
 }
