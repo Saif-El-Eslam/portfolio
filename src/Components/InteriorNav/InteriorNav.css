@@ -1,0 +1,140 @@
+.InteriorNav {
+  position: fixed;
+  z-index: 30;
+  top: 1rem;
+  left: 50%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  width: min(calc(100% - 2rem), 80rem);
+  min-height: 3.5rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: rgba(8, 17, 31, 0.84);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+  transform: translateX(-50%);
+}
+
+.InteriorNav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: fit-content;
+}
+
+.InteriorNav__mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.6rem;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.InteriorNav__brandText {
+  display: none;
+  gap: 0.1rem;
+}
+
+.InteriorNav__brandText strong {
+  font-size: 0.78rem;
+}
+
+.InteriorNav__brandText small {
+  display: none;
+  color: var(--muted);
+  font-size: 0.6rem;
+}
+
+.InteriorNav__pages {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.25rem;
+}
+
+.InteriorNav__pages a {
+  position: relative;
+  padding: 0.65rem 0.75rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.InteriorNav__pages a::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.25rem;
+  left: 0.75rem;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+  content: "";
+}
+
+.InteriorNav__pages a:hover,
+.InteriorNav__pages a.active {
+  color: var(--paper);
+}
+
+.InteriorNav__pages a.active::after {
+  transform: scaleX(1);
+}
+
+.InteriorNav__contact {
+  display: none;
+  justify-self: end;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  border-radius: 0.6rem;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 750;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.InteriorNav__contact:hover {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+@media screen and (min-width: 650px) {
+  .InteriorNav {
+    grid-template-columns: 1fr auto 1fr;
+    width: min(calc(100% - 5rem), 80rem);
+  }
+
+  .InteriorNav__brandText {
+    display: grid;
+  }
+
+  .InteriorNav__brandText small {
+    display: block;
+  }
+
+  .InteriorNav__pages {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .InteriorNav__contact {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .InteriorNav__pages a::after,
+  .InteriorNav__contact {
+    transition: none;
+  }
+}
