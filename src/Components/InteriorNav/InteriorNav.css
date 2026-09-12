@@ -25,22 +25,8 @@
   width: fit-content;
 }
 
-.InteriorNav__mark {
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 0.6rem;
-  background: var(--accent);
-  color: var(--ink);
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
 .InteriorNav__brandText {
-  display: none;
+  display: grid;
   gap: 0.1rem;
 }
 
@@ -49,9 +35,10 @@
 }
 
 .InteriorNav__brandText small {
-  display: none;
+  display: block;
   color: var(--muted);
-  font-size: 0.6rem;
+  font-size: 0.55rem;
+  line-height: 1.1;
 }
 
 .InteriorNav__pages {
@@ -119,7 +106,7 @@
   }
 
   .InteriorNav__brandText small {
-    display: block;
+    font-size: 0.6rem;
   }
 
   .InteriorNav__pages {

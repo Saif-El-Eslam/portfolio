@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ExperienceCard.css";
+import { ChevronDown, ExternalLink } from "lucide-react";
 
 function SkillList({ skills = [], compact = false }) {
   if (!skills.length) return null;
@@ -53,7 +54,7 @@ function ExperienceCard({ experience }) {
                 className="ExperienceCard__companyLink"
                 aria-label={`Visit ${experience.company}`}
               >
-                <img src="/icons/up-right-arrow.png" alt="" />
+                <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />
               </a>
             )}
           </div>
@@ -68,9 +69,12 @@ function ExperienceCard({ experience }) {
             aria-controls={detailsId}
           >
             <span>{isExpanded ? "Hide role details" : "View role details"}</span>
-            <span className="ExperienceCard__chevron" aria-hidden="true">
-              ⌄
-            </span>
+            <ChevronDown
+              size={15}
+              strokeWidth={2}
+              className="ExperienceCard__chevron"
+              aria-hidden="true"
+            />
           </button>
         </div>
       </div>

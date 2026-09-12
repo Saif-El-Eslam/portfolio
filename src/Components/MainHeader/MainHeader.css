@@ -9,7 +9,7 @@
   top: 1rem;
   left: 50%;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1rem;
   width: min(calc(100% - 2rem), 80rem);
@@ -26,38 +26,84 @@
 .MainHeader__brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   width: fit-content;
-  font-size: 0.8rem;
-  font-weight: 750;
   letter-spacing: -0.01em;
 }
 
-.MainHeader__mark {
+.MainHeader__brandIdentity {
   display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  place-items: center;
-  border-radius: 0.6rem;
-  background: var(--accent);
-  color: var(--ink);
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  gap: 0.08rem;
+  line-height: 1.1;
 }
 
-.MainHeader__navLinks {
+.MainHeader__brandIdentity strong {
+  color: var(--paper);
+  font-size: 0.76rem;
+  font-weight: 750;
+}
+
+.MainHeader__brandIdentity small {
+  color: var(--muted);
+  font-size: 0.55rem;
+  font-weight: 550;
+  letter-spacing: 0;
+}
+
+.MainHeader__brandFull {
   display: none;
 }
 
+.MainHeader__navLinks {
+  display: flex;
+  grid-column: auto;
+  align-items: center;
+  justify-self: end;
+  gap: 0.1rem;
+}
+
+.MainHeader__navLinks a {
+  position: relative;
+  padding: 0.55rem 0.42rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.MainHeader__navLinks a::after {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.15rem;
+  left: 0.65rem;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+  content: "";
+}
+
+.MainHeader__navLinks a:hover,
+.MainHeader__navLinks a.active {
+  color: var(--paper);
+}
+
+.MainHeader__navLinks a.active::after {
+  transform: scaleX(1);
+}
+
 .MainHeader__contact {
+  display: none;
   padding: 0.7rem 0.9rem;
   border: 1px solid rgba(94, 234, 212, 0.25);
   border-radius: 0.6rem;
   color: var(--accent);
   font-size: 0.76rem;
   font-weight: 750;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 .MainHeader__contact:hover {
@@ -96,6 +142,16 @@
   color: var(--paper);
   font-size: clamp(0.85rem, 1.2vw, 1rem);
   font-weight: 750;
+}
+
+.MainHeader__nameArabic {
+  display: none;
+  width: fit-content;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 550;
+  letter-spacing: 0;
 }
 
 .MainHeader h1 {
@@ -142,7 +198,9 @@
   font-size: 0.8rem;
   font-weight: 750;
   cursor: pointer;
-  transition: border-color 180ms ease, color 180ms ease,
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
     background-color 180ms ease;
 }
 
@@ -272,8 +330,23 @@
   }
 
   .MainHeader__navLinks {
-    display: flex;
     gap: 0.35rem;
+  }
+
+  .MainHeader__brandShort {
+    display: none;
+  }
+
+  .MainHeader__brandFull {
+    display: inline;
+  }
+
+  .MainHeader__brandIdentity strong {
+    font-size: 0.8rem;
+  }
+
+  .MainHeader__brandIdentity small {
+    font-size: 0.6rem;
   }
 
   .MainHeader__navLinks a {
@@ -309,6 +382,7 @@
   }
 
   .MainHeader__contact {
+    display: block;
     justify-self: end;
   }
 }

@@ -2,6 +2,7 @@ import Info from "../../Info/Info.json";
 import ExperienceCard from "../../Components/ExperienceCard/ExperienceCard";
 import InteriorNav from "../../Components/InteriorNav/InteriorNav";
 import InteriorResume from "../../Components/InteriorResume/InteriorResume";
+import Footer from "../../Components/Footer/Footer";
 import "./AllExperience.css";
 
 function AllExperience() {
@@ -28,6 +29,10 @@ function AllExperience() {
             <p>
               The roles, responsibilities, and technical decisions behind the
               job titles—from first internships to production ownership.
+            </p>
+            <p className="AllExperience__heroArabic" lang="ar" dir="rtl">
+              خبرة مهنية في هندسة البرمجيات وتطوير المنتجات والأنظمة الموزعة
+              والبنية السحابية.
             </p>
             <dl>
               <div>
@@ -69,11 +74,7 @@ function AllExperience() {
         </section>
 
         <InteriorResume />
-
-        <footer className="AllExperience__footer">
-          <a href={`mailto:${Info.email}`}>Start a conversation ↗</a>
-          <p>{Info.copyWrite.code}</p>
-        </footer>
+        <Footer label="Contact" />
       </main>
     </div>
   );

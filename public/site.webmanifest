@@ -1,0 +1,17 @@
+{
+  "name": "Saifeleslam Elsayed — Full Stack Engineer",
+  "short_name": "Saifeleslam",
+  "description": "Portfolio of Saifeleslam Elsayed, full stack engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08111f",
+  "theme_color": "#08111f",
+  "icons": [
+    {
+      "src": "/logo/logo-color.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

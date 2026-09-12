@@ -20,6 +20,7 @@
       "skills": [
         "Ruby on Rails",
         "React.js",
+        "Next.js",
         "MongoDB",
         "Elasticsearch",
         "Sidekiq",
@@ -44,6 +45,7 @@
           "skills": [
             "Ruby on Rails",
             "React.js",
+            "Next.js",
             "Sidekiq",
             "Elasticsearch",
             "gRPC",
@@ -67,6 +69,7 @@
           "skills": [
             "Ruby on Rails",
             "React.js",
+            "Next.js",
             "MongoDB",
             "Elasticsearch",
             "Sidekiq",
@@ -88,6 +91,7 @@
           "skills": [
             "Ruby on Rails",
             "React.js",
+            "Next.js",
             "Chakra UI",
             "MongoDB",
             "Protocol Buffers"

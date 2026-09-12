@@ -44,6 +44,14 @@
   font-size: 1rem;
 }
 
+.AllProjects__heroAside > .AllProjects__heroArabic {
+  display: none;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
 .AllProjects__heroAside dl {
   display: flex;
   gap: 2.5rem;
@@ -105,7 +113,9 @@
   gap: 1rem;
   padding: 1.3rem 0;
   border-bottom: 1px solid var(--line);
-  transition: padding 180ms ease, border-color 180ms ease,
+  transition:
+    padding 180ms ease,
+    border-color 180ms ease,
     background-color 180ms ease;
 }
 
@@ -210,8 +220,8 @@
   position: absolute;
   top: 1.3rem;
   right: 0;
-  color: var(--accent);
-  font-size: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
   transition: transform 180ms ease;
 }
 
@@ -223,26 +233,6 @@
 .AllProjects__row:hover .AllProjects__arrow,
 .AllProjects__row:focus-visible .AllProjects__arrow {
   transform: translate(2px, -2px);
-}
-
-.AllProjects__footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--line-strong);
-}
-
-.AllProjects__footer a,
-.AllProjects__footer p {
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-weight: 650;
-}
-
-.AllProjects__footer a:hover {
-  color: var(--accent);
 }
 
 @media screen and (min-width: 650px) {
@@ -290,7 +280,9 @@
 
 @media screen and (min-width: 1050px) {
   .AllProjects__row {
-    grid-template-columns: 4.5rem minmax(16rem, 1.1fr) minmax(15rem, 1fr) minmax(13rem, 0.8fr) 2rem;
+    grid-template-columns:
+      4.5rem minmax(16rem, 1.1fr) minmax(15rem, 1fr)
+      minmax(13rem, 0.8fr) 2rem;
   }
 
   .AllProjects__skills {

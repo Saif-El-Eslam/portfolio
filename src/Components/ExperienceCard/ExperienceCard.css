@@ -74,12 +74,12 @@
   background: rgba(94, 234, 212, 0.07);
 }
 
-.ExperienceCard__companyLink img {
+.ExperienceCard__companyLink svg {
   width: 0.8rem;
   transition: transform 180ms ease;
 }
 
-.ExperienceCard__companyLink:hover img {
+.ExperienceCard__companyLink:hover svg {
   transform: translate(2px, -2px);
 }
 
@@ -159,8 +159,8 @@
 
 .ExperienceCard__chevron {
   display: inline-block;
-  color: var(--accent);
-  font-size: 1rem;
+  width: 0.72rem;
+  height: 0.72rem;
   transition: transform 180ms ease;
 }
 
@@ -234,7 +234,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ExperienceCard,
-  .ExperienceCard__companyLink img,
+  .ExperienceCard__companyLink svg,
   .ExperienceCard__chevron,
   .ExperienceCard__details {
     animation: none;

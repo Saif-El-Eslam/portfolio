@@ -1,6 +1,8 @@
 import Info from "../../Info/Info.json";
 import InteriorNav from "../../Components/InteriorNav/InteriorNav";
 import InteriorResume from "../../Components/InteriorResume/InteriorResume";
+import Footer from "../../Components/Footer/Footer";
+import { ArrowUpRight } from "lucide-react";
 import "./AllProjects.css";
 
 function ProjectRow({ project, index }) {
@@ -36,9 +38,12 @@ function ProjectRow({ project, index }) {
         {project.skills.length > 4 && <li>+{project.skills.length - 4}</li>}
       </ul>
 
-      <span className="AllProjects__arrow" aria-hidden="true">
-        ↗
-      </span>
+      <ArrowUpRight
+        size={16}
+        strokeWidth={2}
+        className="AllProjects__arrow"
+        aria-hidden="true"
+      />
     </>
   );
 
@@ -81,6 +86,10 @@ function AllProjects() {
               Products, experiments, and systems built across backend, frontend,
               data, and infrastructure.
             </p>
+            <p className="AllProjects__heroArabic" lang="ar" dir="rtl">
+              مشاريع برمجية متكاملة تشمل تطوير الويب والأنظمة الخلفية والبنية
+              التحتية.
+            </p>
             <dl>
               <div>
                 <dt>{Info.projects.length}</dt>
@@ -115,11 +124,7 @@ function AllProjects() {
         </section>
 
         <InteriorResume />
-
-        <footer className="AllProjects__footer">
-          <a href={`mailto:${Info.email}`}>Start a conversation ↗</a>
-          <p>{Info.copyWrite.code}</p>
-        </footer>
+        <Footer label="Contact" />
       </main>
     </div>
   );

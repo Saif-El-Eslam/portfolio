@@ -2,6 +2,7 @@ import "./Experience.css";
 import Info from "../../Info/Info.json";
 import ExperienceCard from "../ExperienceCard/ExperienceCard";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import React, { forwardRef } from "react";
 
 const Experience = forwardRef((_, ref) => {
@@ -30,9 +31,7 @@ const Experience = forwardRef((_, ref) => {
       <div className="Experience__actions">
         <Link to="/experience" className="Experience__primaryAction">
           View All Experience
-          <span className="icon__container arrow-up">
-            <img src="/icons/up-right-arrow.png" alt="" />
-          </span>
+          <ArrowRight size={16} strokeWidth={2} aria-hidden="true" />
         </Link>
         <div className="Experience__resumeActions">
           <a href="resume.pdf" target="_blank" rel="noreferrer">

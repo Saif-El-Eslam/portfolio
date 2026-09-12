@@ -1,34 +1,47 @@
 import "./MainHeader.css";
 import Info from "../../Info/Info.json";
-import { Link as ScrollLink } from "react-scroll";
+import { ArrowDown, ExternalLink } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
-const navigation = ["about", "experience", "projects"];
+const navigation = [
+  { label: "Home", to: "/" },
+  { label: "Projects", to: "/projects" },
+  { label: "Experience", to: "/experience" },
+];
 
-function MainHeader({ activeSection }) {
+function MainHeader() {
   return (
     <header className="MainHeader">
       <nav className="MainHeader__nav" aria-label="Main navigation">
-        <a href="#top" className="MainHeader__brand" aria-label="Back to top">
-          <span className="MainHeader__mark">SE</span>
-          <span>Saifeleslam Elsayed</span>
-        </a>
+        <Link
+          to="/"
+          className="MainHeader__brand"
+          aria-label="Back to home"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          <span className="MainHeader__brandIdentity">
+            <strong>
+              <span className="MainHeader__brandShort">Saifeleslam</span>
+              <span className="MainHeader__brandFull">{Info.name}</span>
+            </strong>
+            <small>{Info.title}</small>
+          </span>
+        </Link>
 
         <div className="MainHeader__navLinks">
-          {navigation.map((section) => (
-            <ScrollLink
-              key={section}
-              to={section}
-              offset={-96}
-              smooth
-              duration={350}
-              className={activeSection === section ? "is-active" : ""}
+          {navigation.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              onClick={() => window.scrollTo(0, 0)}
             >
-              {section}
-            </ScrollLink>
+              {item.label}
+            </NavLink>
           ))}
         </div>
 
-        <a href={`mailto:${Info.email}`} className="MainHeader__contact">
+        <a href="#contact" className="MainHeader__contact">
           Let&apos;s talk
         </a>
       </nav>
@@ -39,6 +52,9 @@ function MainHeader({ activeSection }) {
             <span aria-hidden="true" /> Based in Cairo · Working remotely
           </p>
           <p className="MainHeader__name">{Info.name}</p>
+          <p className="MainHeader__nameArabic" lang="ar" dir="rtl">
+            سيف الإسلام السيد · مهندس برمجيات Full Stack
+          </p>
           <h1>
             I make complicated systems
             <em> feel straightforward.</em>
@@ -51,13 +67,13 @@ function MainHeader({ activeSection }) {
           </p>
 
           <div className="MainHeader__heroActions">
-            <ScrollLink to="projects" offset={-96} smooth duration={350}>
+            <a href="#experience">
               See selected work
-              <span aria-hidden="true">↓</span>
-            </ScrollLink>
+              <ArrowDown size={15} strokeWidth={2} aria-hidden="true" />
+            </a>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
               Open resume
-              <span aria-hidden="true">↗</span>
+              <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -91,7 +107,8 @@ function MainHeader({ activeSection }) {
           </dl>
           <div className="MainHeader__briefFooter">
             <span>Rails</span>
-            <span>React</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
             <span>Distributed systems</span>
           </div>
         </aside>

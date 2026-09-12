@@ -44,6 +44,14 @@
   font-size: 1rem;
 }
 
+.AllExperience__heroAside > .AllExperience__heroArabic {
+  display: none;
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
 .AllExperience__heroAside dl {
   display: flex;
   flex-wrap: wrap;
@@ -124,25 +132,6 @@
   width: 2rem;
   height: 1px;
   background: var(--line-strong);
-}
-
-.AllExperience__footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 2rem 0;
-}
-
-.AllExperience__footer a,
-.AllExperience__footer p {
-  color: var(--muted);
-  font-size: 0.7rem;
-  font-weight: 650;
-}
-
-.AllExperience__footer a:hover {
-  color: var(--accent);
 }
 
 @media screen and (min-width: 650px) {

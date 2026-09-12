@@ -1,4 +1,5 @@
 .Footer {
+  scroll-margin-top: 6rem;
   padding: 3.5rem 0 1.5rem;
   border-top: 1px solid var(--line-strong);
 }
@@ -13,82 +14,213 @@
 }
 
 .Footer__heading h2 {
-  max-width: 10ch;
+  max-width: 12ch;
 }
 
 .Footer__heading > p:last-child {
-  max-width: 31rem;
+  max-width: 32rem;
   margin-top: 1.5rem;
+}
+
+.Footer__contactGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
 .Footer__email {
   position: relative;
-  display: grid;
-  gap: 0.35rem;
-  margin-top: 3.5rem;
-  padding: 1.4rem 3.5rem 1.4rem 0;
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-  transition: padding-left 180ms ease, border-color 180ms ease;
+  display: flex;
+  min-height: 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow: hidden;
+  padding: 1.35rem;
+  border: 1px solid rgba(94, 234, 212, 0.4);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 100% 0, rgba(94, 234, 212, 0.18), transparent 13rem),
+    var(--surface-raised);
+  transition: border-color 180ms ease, transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.Footer__email span {
-  color: var(--muted);
+.Footer__email::after {
+  position: absolute;
+  right: -4rem;
+  bottom: -5rem;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid rgba(94, 234, 212, 0.16);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.Footer__emailLabel,
+.Footer__emailAction {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+}
+
+.Footer__emailLabel {
+  color: var(--accent);
   font-size: 0.68rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
 .Footer__email strong {
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
   color: var(--paper);
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.05rem, 3vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.Footer__emailAction {
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.Footer__emailAction svg {
+  transition: transform 180ms ease;
+}
+
+.Footer__email:hover,
+.Footer__email:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 1.25rem 3.5rem rgba(0, 0, 0, 0.2);
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.Footer__email:hover .Footer__emailAction svg,
+.Footer__email:focus-visible .Footer__emailAction svg {
+  transform: translate(2px, -2px);
+}
+
+.Footer__socials {
+  padding: 1.1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 1rem;
+  background: rgba(12, 25, 41, 0.72);
+}
+
+.Footer__socials > p {
+  margin-bottom: 0.7rem;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.Footer__socials ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.Footer__socials a {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 4.25rem;
+  padding: 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  background: rgba(242, 245, 244, 0.025);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.Footer__socialIcon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: rgba(94, 234, 212, 0.05);
+}
+
+.Footer__socialIcon img {
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
+}
+
+.Footer__socialText {
+  display: grid;
+  min-width: 0;
+  gap: 0.15rem;
+}
+
+.Footer__socialText strong {
+  color: var(--paper);
+  font-size: 0.76rem;
+}
+
+.Footer__socialText small {
+  display: none;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 0.6rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.Footer__email i {
-  position: absolute;
-  top: 50%;
-  right: 0.25rem;
-  color: var(--accent);
-  font-size: 1.4rem;
-  font-style: normal;
-  transform: translateY(-50%);
+.Footer__socials a > svg {
+  color: var(--muted);
+  transition: color 180ms ease, transform 180ms ease;
 }
 
-.Footer__email:hover {
-  padding-left: 0.75rem;
-  border-color: var(--accent);
+.Footer__socials a:hover,
+.Footer__socials a:focus-visible {
+  border-color: rgba(94, 234, 212, 0.25);
+  background: rgba(94, 234, 212, 0.06);
+  outline: none;
+}
+
+.Footer__socials a:hover > svg,
+.Footer__socials a:focus-visible > svg {
+  color: var(--accent);
+  transform: translate(2px, -2px);
 }
 
 .Footer__bottom {
-  display: grid;
-  gap: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
   padding-top: 2rem;
 }
 
-.Footer__bottom p,
-.Footer__bottom a {
+.Footer__bottom p {
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 650;
 }
 
-.Footer__bottom ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.Footer__bottom a:hover {
-  color: var(--accent);
+@media screen and (min-width: 500px) {
+  .Footer__socialText small {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 750px) {
   .Footer {
-    padding: 6rem 0 2.5rem;
+    padding: 5rem 0 2.5rem;
   }
 
   .Footer__heading {
@@ -106,21 +238,30 @@
     margin-top: 0;
   }
 
-  .Footer__email {
-    margin-top: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .Footer__contactGrid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 0.85fr);
+    margin-top: 4rem;
   }
 
-  .Footer__bottom {
-    grid-template-columns: 1fr auto auto;
-    align-items: center;
-    gap: 2rem;
+  .Footer__email {
+    min-height: 18rem;
+    padding: 1.75rem;
+  }
+
+  .Footer__socials {
+    padding: 1.25rem;
+  }
+
+  .Footer__socials ul {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .Footer__email {
+  .Footer__email,
+  .Footer__emailAction svg,
+  .Footer__socials a,
+  .Footer__socials a > svg {
     transition: none;
   }
 }

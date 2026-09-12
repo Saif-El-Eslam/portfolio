@@ -1,6 +1,7 @@
 import "./Projects.css";
 import Info from "../../Info/Info.json";
 import { Link } from "react-router-dom";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import React, { forwardRef } from "react";
 
 const Projects = forwardRef((_, ref) => {
@@ -50,7 +51,7 @@ const Projects = forwardRef((_, ref) => {
                   <div className="Projects__titleRow">
                     <h3>{project.title}</h3>
                     <span className="Projects__external" aria-hidden="true">
-                      <img src="/icons/up-right-arrow.png" alt="" />
+                      <ExternalLink size={15} strokeWidth={2} />
                     </span>
                   </div>
 
@@ -84,9 +85,7 @@ const Projects = forwardRef((_, ref) => {
       <div className="Projects__archive">
         <Link to="/projects">
           View All Projects
-          <span className="icon__container arrow-up">
-            <img src="/icons/up-right-arrow.png" alt="" />
-          </span>
+          <ArrowRight size={16} strokeWidth={2} aria-hidden="true" />
         </Link>
       </div>
     </section>

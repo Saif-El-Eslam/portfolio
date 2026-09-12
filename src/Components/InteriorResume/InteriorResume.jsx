@@ -1,4 +1,5 @@
 import "./InteriorResume.css";
+import { Download, ExternalLink } from "lucide-react";
 
 function InteriorResume() {
   return (
@@ -9,10 +10,12 @@ function InteriorResume() {
       </div>
       <div className="InteriorResume__actions">
         <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          View online ↗
+          <span>View online</span>
+          <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />
         </a>
         <a href="/resume.pdf" download>
-          Download PDF ↓
+          <span>Download PDF</span>
+          <Download size={15} strokeWidth={2} aria-hidden="true" />
         </a>
       </div>
     </section>
