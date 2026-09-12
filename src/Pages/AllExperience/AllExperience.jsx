@@ -28,7 +28,7 @@ function AllExperience() {
           <div className="AllExperience__heroAside">
             <p>
               The roles, responsibilities, and technical decisions behind the
-              job titles—from first internships to production ownership.
+              job titles&ndash;from first internships to production ownership.
             </p>
             <p className="AllExperience__heroArabic" lang="ar" dir="rtl">
               خبرة مهنية في هندسة البرمجيات وتطوير المنتجات والأنظمة الموزعة

@@ -20,7 +20,7 @@ const About = forwardRef((_, ref) => {
       <div className="About__body">
         <p className="About__lead">
           I&apos;m most useful where product decisions and technical constraints
-          meet—turning ambitious ideas into systems that are understandable,
+          meet&ndash;turning ambitious ideas into systems that are understandable,
           resilient, and ready to ship.
         </p>
 

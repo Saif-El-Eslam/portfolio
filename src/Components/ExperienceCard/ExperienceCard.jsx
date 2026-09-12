@@ -30,7 +30,7 @@ function ExperienceCard({ experience }) {
       >
         <div className="ExperienceCard__meta">
           <p className="ExperienceCard__date">
-            {experience.from} — {experience.to}
+            {experience.from} &ndash; {experience.to}
           </p>
           <p className="ExperienceCard__location">{experience.location}</p>
         </div>
@@ -92,7 +92,7 @@ function ExperienceCard({ experience }) {
             <div className="ExperienceCard__roleHeader">
               <div>
                 <h4>{role.title}</h4>
-                <p>{role.from} — {role.to}</p>
+                <p>{role.from} &ndash; {role.to}</p>
               </div>
               <span className="ExperienceCard__type">
                 {role.employment_type}

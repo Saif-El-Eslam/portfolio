@@ -62,7 +62,7 @@ function MainHeader() {
           <p className="MainHeader__intro">
             Full stack engineer working from distributed Rails services to the
             React interfaces people actually touch. I care about software that
-            stays clear under pressure—for users and for the teams maintaining
+            stays clear under pressure&ndash;for users and for the teams maintaining
             it.
           </p>
 

@@ -48,7 +48,7 @@ function buildStructuredData(pathname) {
     ],
     url: SITE_URL,
     image: PROFILE_IMAGE,
-    jobTitle: `${Info.title} — مهندس برمجيات Full Stack`,
+    jobTitle: `${Info.title} – مهندس برمجيات Full Stack`,
     description: Info.summary,
     email: `mailto:${Info.email}`,
     knowsLanguage: ["English", "Arabic", "اللغة العربية"],
@@ -63,14 +63,14 @@ function buildStructuredData(pathname) {
       ],
       occupationLocation: {
         "@type": "City",
-        name: "Cairo — القاهرة",
+        name: "Cairo – القاهرة",
       },
       skills:
         "Ruby on Rails, Next.js, React, Node.js, MongoDB, Elasticsearch, distributed systems, cloud infrastructure",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Cairo — القاهرة",
+      addressLocality: "Cairo – القاهرة",
       addressCountry: "EG",
     },
     sameAs: Info.links
@@ -152,7 +152,7 @@ function buildStructuredData(pathname) {
         "@type": "ProfilePage",
         "@id": `${SITE_URL}/#profile`,
         url: SITE_URL,
-        name: "Saifeleslam Elsayed — Full Stack Engineer",
+        name: "Saifeleslam Elsayed – Full Stack Engineer",
         mainEntity: person,
       },
     ],

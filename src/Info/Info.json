@@ -4,9 +4,9 @@
   "email": "saifeleslamelsayed@gmail.com",
   "summary": "I build secure web platforms, distributed backend systems, real-time workflows, and polished user experiences.",
   "about": {
-    "past": "My path into software engineering started at Cairo University and widened through a scholarship experience at San José State University. Internships, volunteer work, and a lot of hands-on building gave me a practical foundation in web engineering—and taught me to value curiosity, ownership, and clear thinking.",
+    "past": "My path into software engineering started at Cairo University and widened through a scholarship experience at San José State University. Internships, volunteer work, and a lot of hands-on building gave me a practical foundation in web engineering, and taught me to value curiosity, ownership, and clear thinking.",
     "present": "Today, I work across the stack on production systems at AvidBeam and Thaat. My work spans React and Ruby on Rails applications, distributed services, real-time and asynchronous workflows, multi-tenant data systems, cloud infrastructure, and third-party integrations. I also build and deploy freelance products, collaborating closely with designers and engineers to turn complete user journeys into reliable software.",
-    "hobbies": "Away from the keyboard, I spend time at the gym and follow documentaries and current affairs, especially economics and history. Both are good reminders that every system—technical or otherwise—has people and tradeoffs behind it."
+    "hobbies": "Away from the keyboard, I spend time at the gym and follow documentaries and current affairs, especially economics and history. Both are good reminders that every system, technical or otherwise, has people and tradeoffs behind it."
   },
   "experience": [
     {
