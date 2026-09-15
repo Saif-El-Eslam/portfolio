@@ -144,17 +144,7 @@
   font-weight: 750;
 }
 
-.MainHeader__nameArabic {
-  display: none;
-  width: fit-content;
-  margin-top: 0.3rem;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 550;
-  letter-spacing: 0;
-}
-
-.MainHeader h1 {
+.MainHeader__statement {
   max-width: 13ch;
   margin-top: 0.75rem;
   color: var(--paper);
@@ -164,7 +154,7 @@
   line-height: 0.91;
 }
 
-.MainHeader h1 em {
+.MainHeader__statement em {
   color: var(--accent);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;

@@ -30,10 +30,6 @@ function AllExperience() {
               The roles, responsibilities, and technical decisions behind the
               job titles&ndash;from first internships to production ownership.
             </p>
-            <p className="AllExperience__heroArabic" lang="ar" dir="rtl">
-              خبرة مهنية في هندسة البرمجيات وتطوير المنتجات والأنظمة الموزعة
-              والبنية السحابية.
-            </p>
             <dl>
               <div>
                 <dt>{Info.experience.length}</dt>

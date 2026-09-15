@@ -4,7 +4,7 @@ import { ArrowDown, ExternalLink } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 const navigation = [
-  { label: "Home", to: "/" },
+  { label: "Services", to: "/web-development" },
   { label: "Projects", to: "/projects" },
   { label: "Experience", to: "/experience" },
 ];
@@ -33,7 +33,6 @@ function MainHeader() {
             <NavLink
               key={item.to}
               to={item.to}
-              end={item.to === "/"}
               onClick={() => window.scrollTo(0, 0)}
             >
               {item.label}
@@ -51,14 +50,13 @@ function MainHeader() {
           <p className="MainHeader__availability">
             <span aria-hidden="true" /> Based in Cairo · Working remotely
           </p>
-          <p className="MainHeader__name">{Info.name}</p>
-          <p className="MainHeader__nameArabic" lang="ar" dir="rtl">
-            سيف الإسلام السيد · مهندس برمجيات Full Stack
-          </p>
-          <h1>
+          <h1 className="MainHeader__name">
+            {Info.name} &mdash; Full Stack Engineer &amp; Freelance Web Developer
+          </h1>
+          <h2 className="MainHeader__statement">
             I make complicated systems
             <em> feel straightforward.</em>
-          </h1>
+          </h2>
           <p className="MainHeader__intro">
             Full stack engineer working from distributed Rails services to the
             React interfaces people actually touch. I care about software that

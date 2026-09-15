@@ -9,19 +9,36 @@ const pageMetadata = {
   "/": {
     title: "Saifeleslam Elsayed | Full Stack Engineer",
     description:
-      "Portfolio of Saifeleslam Elsayed, a full stack engineer building distributed Ruby on Rails systems, Next.js products, real-time workflows, and cloud infrastructure. سيف الإسلام السيد، مهندس برمجيات Full Stack.",
+      "Saifeleslam Elsayed (also Saif Eleslam or Seifeleslam) is a full stack engineer and freelance web developer in Cairo building reliable digital products.",
   },
   "/projects": {
     title: "Software Projects | Saifeleslam Elsayed",
     description:
-      "Explore full-stack, backend, frontend, data, and infrastructure projects by Saifeleslam Elsayed. مشاريع سيف الإسلام السيد في تطوير الويب والأنظمة الخلفية وNext.js وRails.",
+      "Explore full-stack, backend, frontend, data, and infrastructure projects built and delivered by Saifeleslam Elsayed.",
   },
   "/experience": {
     title: "Engineering Experience | Saifeleslam Elsayed",
     description:
-      "Explore Saifeleslam Elsayed's full-stack engineering experience across AvidBeam, Thaat, distributed systems, and cloud infrastructure. خبرة سيف الإسلام السيد في هندسة البرمجيات وتطوير الويب.",
+      "Explore Saifeleslam Elsayed's full-stack engineering experience across AvidBeam, Thaat, distributed systems, and cloud infrastructure.",
+  },
+  "/web-development": {
+    title: "Freelance Full Stack Web Developer in Cairo | Saifeleslam",
+    description:
+      "Hire Saifeleslam Elsayed, a freelance full stack engineer in Cairo, to build fast, secure websites, web applications, e-commerce platforms, and APIs.",
   },
 };
+
+const alternateNames = [
+  "Saif Eleslam Elsayed",
+  "Saif El Eslam Elsayed",
+  "Seifeleslam Elsayed",
+  "Seif Eleslam Elsayed",
+  "Saifeleslam Abdelrahman Elsayed",
+  "سيف الإسلام السيد",
+  "سيف الاسلام السيد",
+  "سيف الإسلام عبدالرحمن السيد",
+  "سيف الاسلام عبدالرحمن السيد",
+];
 
 function setMeta(selector, attribute, value) {
   let element = document.head.querySelector(selector);
@@ -41,36 +58,31 @@ function buildStructuredData(pathname) {
     "@type": "Person",
     "@id": `${SITE_URL}/#saifeleslam-elsayed`,
     name: Info.name,
-    alternateName: [
-      "Saif El Eslam Elsayed",
-      "سيف الإسلام السيد",
-      "سيف الاسلام السيد",
-    ],
+    alternateName: alternateNames,
     url: SITE_URL,
     image: PROFILE_IMAGE,
-    jobTitle: `${Info.title} – مهندس برمجيات Full Stack`,
+    jobTitle: `${Info.title} and Freelance Web Developer`,
     description: Info.summary,
     email: `mailto:${Info.email}`,
-    knowsLanguage: ["English", "Arabic", "اللغة العربية"],
+    knowsLanguage: ["English", "Arabic"],
     hasOccupation: {
       "@type": "Occupation",
-      name: "Full Stack Engineer",
+      name: "Full Stack Engineer and Freelance Web Developer",
       alternateName: [
         "Full Stack Developer",
-        "مهندس برمجيات Full Stack",
-        "مطور ويب Full Stack",
-        "مهندس برمجيات متكامل",
+        "Freelance Full Stack Developer",
+        "Freelance Web Developer",
       ],
       occupationLocation: {
         "@type": "City",
-        name: "Cairo – القاهرة",
+        name: "Cairo",
       },
       skills:
         "Ruby on Rails, Next.js, React, Node.js, MongoDB, Elasticsearch, distributed systems, cloud infrastructure",
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Cairo – القاهرة",
+      addressLocality: "Cairo",
       addressCountry: "EG",
     },
     sameAs: Info.links
@@ -86,6 +98,8 @@ function buildStructuredData(pathname) {
       "Elasticsearch",
       "Distributed systems",
       "Cloud infrastructure",
+      "Website development",
+      "Web application development",
     ],
     worksFor: {
       "@type": "Organization",
@@ -93,6 +107,33 @@ function buildStructuredData(pathname) {
       url: "https://www.avidbeam.com/",
     },
   };
+
+  if (pathname === "/web-development") {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${SITE_URL}/web-development#service`,
+      name: "Full Stack Website and Web Application Development",
+      alternateName: [
+        "Freelance Full Stack Development",
+        "Freelance Website Development",
+        "Custom Web Application Development",
+      ],
+      url: `${SITE_URL}/web-development`,
+      description: pageMetadata[pathname].description,
+      provider: person,
+      areaServed: [
+        { "@type": "Country", name: "Egypt" },
+        { "@type": "AdministrativeArea", name: "Middle East" },
+      ],
+      serviceType: [
+        "Website development",
+        "Full stack web application development",
+        "E-commerce development",
+        "Backend API development",
+      ],
+    };
+  }
 
   if (pathname === "/projects") {
     return {
@@ -138,15 +179,10 @@ function buildStructuredData(pathname) {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         name: "Saifeleslam Elsayed",
-        alternateName: [
-          "Saif El Eslam Elsayed",
-          "Saifeleslam Elsayed Portfolio",
-          "سيف الإسلام السيد",
-          "سيف الاسلام السيد",
-        ],
+        alternateName: [...alternateNames, "Saifeleslam Elsayed Portfolio"],
         url: SITE_URL,
         description: pageMetadata["/"].description,
-        inLanguage: ["en", "ar"],
+        inLanguage: "en",
       },
       {
         "@type": "ProfilePage",
@@ -163,8 +199,10 @@ function Seo() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const metadata = pageMetadata[pathname] || pageMetadata["/"];
-    const canonicalUrl = `${SITE_URL}${pathname === "/" ? "" : pathname}`;
+    const normalizedPath =
+      pathname === "/" ? pathname : pathname.replace(/\/+$/, "");
+    const metadata = pageMetadata[normalizedPath] || pageMetadata["/"];
+    const canonicalUrl = `${SITE_URL}${normalizedPath === "/" ? "" : normalizedPath}`;
 
     document.title = metadata.title;
     document.documentElement.lang = "en";
@@ -193,7 +231,7 @@ function Seo() {
     setMeta(
       'meta[property="og:type"]',
       ["property", "og:type"],
-      pathname === "/" ? "profile" : "website",
+      normalizedPath === "/" ? "profile" : "website",
     );
     setMeta('meta[property="og:image"]', ["property", "og:image"], PROFILE_IMAGE);
     setMeta(
@@ -207,11 +245,6 @@ function Seo() {
       "Saifeleslam Elsayed",
     );
     setMeta('meta[property="og:locale"]', ["property", "og:locale"], "en_US");
-    setMeta(
-      'meta[property="og:locale:alternate"]',
-      ["property", "og:locale:alternate"],
-      "ar_EG",
-    );
     setMeta('meta[name="twitter:card"]', ["name", "twitter:card"], "summary");
     setMeta(
       'meta[name="twitter:title"]',
@@ -242,7 +275,7 @@ function Seo() {
       structuredData.id = "portfolio-structured-data";
       document.head.appendChild(structuredData);
     }
-    structuredData.textContent = JSON.stringify(buildStructuredData(pathname));
+    structuredData.textContent = JSON.stringify(buildStructuredData(normalizedPath));
   }, [pathname]);
 
   return null;

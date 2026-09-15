@@ -86,10 +86,6 @@ function AllProjects() {
               Products, experiments, and systems built across backend, frontend,
               data, and infrastructure.
             </p>
-            <p className="AllProjects__heroArabic" lang="ar" dir="rtl">
-              مشاريع برمجية متكاملة تشمل تطوير الويب والأنظمة الخلفية والبنية
-              التحتية.
-            </p>
             <dl>
               <div>
                 <dt>{Info.projects.length}</dt>

@@ -9,10 +9,7 @@ const About = forwardRef((_, ref) => {
         <p className="About__index">01 / About</p>
         <h2>Engineering with a product instinct.</h2>
         <figure className="About__portrait">
-          <img
-            src="/about/image.jpeg"
-            alt="Saifeleslam Elsayed"
-          />
+          <img src="/about/image.jpeg" alt="Saifeleslam Elsayed" />
           <figcaption>Cairo, Egypt</figcaption>
         </figure>
       </header>
@@ -20,8 +17,8 @@ const About = forwardRef((_, ref) => {
       <div className="About__body">
         <p className="About__lead">
           I&apos;m most useful where product decisions and technical constraints
-          meet&ndash;turning ambitious ideas into systems that are understandable,
-          resilient, and ready to ship.
+          meet&ndash;turning ambitious ideas into systems that are
+          understandable, resilient, and ready to ship.
         </p>
 
         <div className="About__story">

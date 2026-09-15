@@ -44,14 +44,6 @@
   font-size: 1rem;
 }
 
-.AllExperience__heroAside > .AllExperience__heroArabic {
-  display: none;
-  margin-top: 0.75rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.7;
-}
-
 .AllExperience__heroAside dl {
   display: flex;
   flex-wrap: wrap;
