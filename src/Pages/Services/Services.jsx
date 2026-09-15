@@ -2,7 +2,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import InteriorNav from "../../Components/InteriorNav/InteriorNav";
 import Footer from "../../Components/Footer/Footer";
-import "./WebDevelopment.css";
+import "./Services.css";
 
 const services = [
   {
@@ -34,43 +34,44 @@ const process = [
   "Deploy, document, and support a dependable launch",
 ];
 
-function WebDevelopment() {
+function Services() {
   return (
-    <div className="WebDevelopment">
+    <div className="Services">
       <InteriorNav />
 
-      <main className="WebDevelopment__wrapper">
-        <header className="WebDevelopment__hero">
-          <p className="WebDevelopment__eyebrow">
+      <main className="Services__wrapper">
+        <header className="Services__hero">
+          <p className="Services__eyebrow">
             Web development services · Cairo &amp; remote
           </p>
           <h1>
             Websites that work for your business,
             <em> not just look the part.</em>
           </h1>
-          <p className="WebDevelopment__intro">
-            I&apos;m Saifeleslam Elsayed, a freelance full stack engineer based in
-            Cairo. I design, build, and deploy websites and web applications for
-            businesses and teams in Egypt, the Middle East, and remotely.
+          <p className="Services__intro">
+            I&apos;m Saifeleslam Elsayed, a freelance full stack engineer based
+            in Cairo. I design, build, and deploy websites and web applications
+            for businesses and teams in Egypt, the Middle East, and remotely.
           </p>
-          <div className="WebDevelopment__actions">
+          <div className="Services__actions">
             <a href="mailto:saifeleslamelsayed@gmail.com">
               Discuss your website
               <ArrowUpRight size={17} aria-hidden="true" />
             </a>
             <Link to="/projects">See delivered projects</Link>
+            <Link to="/ar/services">اللغة العربية</Link>
           </div>
         </header>
 
         <section
-          className="WebDevelopment__services"
+          className="Services__services"
           aria-labelledby="services-title"
         >
-          <div className="WebDevelopment__sectionHeading">
+          <div className="Services__sectionHeading">
             <p>01 / What I build</p>
             <h2 id="services-title">Full stack, from idea to production.</h2>
           </div>
-          <div className="WebDevelopment__serviceGrid">
+          <div className="Services__serviceGrid">
             {services.map((service, index) => (
               <article key={service.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -81,11 +82,8 @@ function WebDevelopment() {
           </div>
         </section>
 
-        <section
-          className="WebDevelopment__process"
-          aria-labelledby="process-title"
-        >
-          <div className="WebDevelopment__sectionHeading">
+        <section className="Services__process" aria-labelledby="process-title">
+          <div className="Services__sectionHeading">
             <p>02 / How we work</p>
             <h2 id="process-title">A clear path to launch.</h2>
           </div>
@@ -105,4 +103,4 @@ function WebDevelopment() {
   );
 }
 
-export default WebDevelopment;
+export default Services;

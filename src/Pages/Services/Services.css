@@ -1,21 +1,21 @@
-.WebDevelopment {
+.Services {
   width: min(calc(100% - 2rem), 80rem);
   margin: 0 auto;
 }
 
-.WebDevelopment__wrapper {
+.Services__wrapper {
   padding-top: 8rem;
 }
 
-.WebDevelopment__hero {
+.Services__hero {
   display: grid;
   gap: 1.5rem;
   max-width: 66rem;
   padding: 4rem 0 6rem;
 }
 
-.WebDevelopment__eyebrow,
-.WebDevelopment__sectionHeading > p {
+.Services__eyebrow,
+.Services__sectionHeading > p {
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 800;
@@ -23,31 +23,31 @@
   text-transform: uppercase;
 }
 
-.WebDevelopment__hero h1 {
+.Services__hero h1 {
   max-width: 15ch;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.94;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 0.9;
 }
 
-.WebDevelopment__hero h1 em,
-.WebDevelopment__sectionHeading h2 em {
+.Services__hero h1 em,
+.Services__sectionHeading h2 em {
   color: var(--accent);
   font-family: Georgia, serif;
   font-weight: 400;
 }
 
-.WebDevelopment__intro {
+.Services__intro {
   max-width: 47rem;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.WebDevelopment__actions {
+.Services__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-.WebDevelopment__actions a {
+.Services__actions a {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -59,36 +59,36 @@
   font-weight: 750;
 }
 
-.WebDevelopment__actions a:first-child {
+.Services__actions a:first-child {
   border-color: var(--accent);
   background: var(--accent);
   color: var(--ink);
 }
 
-.WebDevelopment__services,
-.WebDevelopment__process {
+.Services__services,
+.Services__process {
   padding: 6rem 0;
   border-top: 1px solid var(--line);
 }
 
-.WebDevelopment__sectionHeading {
+.Services__sectionHeading {
   display: grid;
   gap: 1rem;
   margin-bottom: 3rem;
 }
 
-.WebDevelopment__sectionHeading h2 {
+.Services__sectionHeading h2 {
   max-width: 14ch;
 }
 
-.WebDevelopment__serviceGrid {
+.Services__serviceGrid {
   display: grid;
   gap: 1px;
   border: 1px solid var(--line);
   background: var(--line);
 }
 
-.WebDevelopment__serviceGrid article {
+.Services__serviceGrid article {
   display: grid;
   align-content: start;
   gap: 0.75rem;
@@ -97,24 +97,24 @@
   background: var(--surface);
 }
 
-.WebDevelopment__serviceGrid article > span {
+.Services__serviceGrid article > span {
   margin-bottom: 2rem;
   color: var(--muted);
   font-size: 0.7rem;
   font-weight: 800;
 }
 
-.WebDevelopment__serviceGrid h3 {
+.Services__serviceGrid h3 {
   font-size: 1.35rem;
 }
 
-.WebDevelopment__process ol {
+.Services__process ol {
   display: grid;
   gap: 0.75rem;
   max-width: 52rem;
 }
 
-.WebDevelopment__process li {
+.Services__process li {
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -124,23 +124,23 @@
   font-size: 0.95rem;
 }
 
-.WebDevelopment__process li svg {
+.Services__process li svg {
   flex: 0 0 auto;
   color: var(--accent);
 }
 
 @media screen and (min-width: 700px) {
-  .WebDevelopment {
+  .Services {
     width: min(calc(100% - 5rem), 80rem);
   }
 
-  .WebDevelopment__serviceGrid {
+  .Services__serviceGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .WebDevelopment__serviceGrid {
+  .Services__serviceGrid {
     grid-template-columns: repeat(4, 1fr);
   }
 }

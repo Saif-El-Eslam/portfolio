@@ -1,0 +1,66 @@
+.ArabicServices {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.ArabicServices__nav {
+  position: fixed;
+  z-index: 30;
+  top: 1rem;
+  left: 50%;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(calc(100% - 2rem), 80rem);
+  min-height: 3.5rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: rgba(8, 17, 31, 0.84);
+  backdrop-filter: blur(16px);
+  transform: translateX(-50%);
+}
+
+.ArabicServices__nav > a {
+  color: var(--muted-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ArabicServices__brand {
+  display: grid;
+  justify-self: start;
+  gap: 0.1rem;
+}
+
+.ArabicServices__brand strong {
+  color: var(--paper);
+  font-size: 0.78rem;
+}
+
+.ArabicServices__brand small {
+  color: var(--muted);
+  font-size: 0.58rem;
+}
+
+.ArabicServices .Services__hero h1,
+.ArabicServices .Services__sectionHeading h2,
+.ArabicServices .Footer h2 {
+  font-family: Tahoma, Arial, sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.ArabicServices .Services__sectionHeading h2 {
+  max-width: 16ch;
+}
+
+.ArabicServices .Services__process ol {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .ArabicServices__nav {
+    width: min(calc(100% - 5rem), 80rem);
+  }
+}

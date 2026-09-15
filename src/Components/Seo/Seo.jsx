@@ -21,10 +21,15 @@ const pageMetadata = {
     description:
       "Explore Saifeleslam Elsayed's full-stack engineering experience across AvidBeam, Thaat, distributed systems, and cloud infrastructure.",
   },
-  "/web-development": {
-    title: "Freelance Full Stack Web Developer in Cairo | Saifeleslam",
+  "/services": {
+    title: "Full Stack Development Services in Cairo | Saifeleslam",
     description:
       "Hire Saifeleslam Elsayed, a freelance full stack engineer in Cairo, to build fast, secure websites, web applications, e-commerce platforms, and APIs.",
+  },
+  "/ar/services": {
+    title: "خدمات تصميم وتطوير المواقع | سيف الإسلام السيد",
+    description:
+      "خدمات برمجة وتصميم المواقع وتطبيقات الويب والمتاجر الإلكترونية للشركات والأفراد من سيف الإسلام السيد، مهندس برمجيات مستقل في القاهرة.",
   },
 };
 
@@ -108,18 +113,18 @@ function buildStructuredData(pathname) {
     },
   };
 
-  if (pathname === "/web-development") {
+  if (pathname === "/services") {
     return {
       "@context": "https://schema.org",
       "@type": "Service",
-      "@id": `${SITE_URL}/web-development#service`,
+      "@id": `${SITE_URL}/services#service`,
       name: "Full Stack Website and Web Application Development",
       alternateName: [
         "Freelance Full Stack Development",
         "Freelance Website Development",
         "Custom Web Application Development",
       ],
-      url: `${SITE_URL}/web-development`,
+      url: `${SITE_URL}/services`,
       description: pageMetadata[pathname].description,
       provider: person,
       areaServed: [
@@ -132,6 +137,35 @@ function buildStructuredData(pathname) {
         "E-commerce development",
         "Backend API development",
       ],
+    };
+  }
+
+  if (pathname === "/ar/services") {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${SITE_URL}/ar/services#service`,
+      name: "خدمات تصميم وتطوير المواقع وتطبيقات الويب",
+      alternateName: [
+        "إنشاء مواقع",
+        "عمل مواقع",
+        "برمجة مواقع",
+        "تطوير تطبيقات الويب",
+      ],
+      url: `${SITE_URL}/ar/services`,
+      description: pageMetadata[pathname].description,
+      provider: person,
+      areaServed: [
+        { "@type": "Country", name: "مصر" },
+        { "@type": "AdministrativeArea", name: "الشرق الأوسط" },
+      ],
+      serviceType: [
+        "تصميم وتطوير المواقع",
+        "تطوير تطبيقات الويب",
+        "برمجة المتاجر الإلكترونية",
+        "تطوير الأنظمة الخلفية والواجهات البرمجية",
+      ],
+      inLanguage: "ar",
     };
   }
 
@@ -203,9 +237,11 @@ function Seo() {
       pathname === "/" ? pathname : pathname.replace(/\/+$/, "");
     const metadata = pageMetadata[normalizedPath] || pageMetadata["/"];
     const canonicalUrl = `${SITE_URL}${normalizedPath === "/" ? "" : normalizedPath}`;
+    const isArabic = normalizedPath.startsWith("/ar/");
 
     document.title = metadata.title;
-    document.documentElement.lang = "en";
+    document.documentElement.lang = isArabic ? "ar" : "en";
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
 
     setMeta(
       'meta[name="description"]',
@@ -233,7 +269,11 @@ function Seo() {
       ["property", "og:type"],
       normalizedPath === "/" ? "profile" : "website",
     );
-    setMeta('meta[property="og:image"]', ["property", "og:image"], PROFILE_IMAGE);
+    setMeta(
+      'meta[property="og:image"]',
+      ["property", "og:image"],
+      PROFILE_IMAGE,
+    );
     setMeta(
       'meta[property="og:image:alt"]',
       ["property", "og:image:alt"],
@@ -244,7 +284,11 @@ function Seo() {
       ["property", "og:site_name"],
       "Saifeleslam Elsayed",
     );
-    setMeta('meta[property="og:locale"]', ["property", "og:locale"], "en_US");
+    setMeta(
+      'meta[property="og:locale"]',
+      ["property", "og:locale"],
+      isArabic ? "ar_EG" : "en_US",
+    );
     setMeta('meta[name="twitter:card"]', ["name", "twitter:card"], "summary");
     setMeta(
       'meta[name="twitter:title"]',
@@ -256,7 +300,11 @@ function Seo() {
       ["name", "twitter:description"],
       metadata.description,
     );
-    setMeta('meta[name="twitter:image"]', ["name", "twitter:image"], PROFILE_IMAGE);
+    setMeta(
+      'meta[name="twitter:image"]',
+      ["name", "twitter:image"],
+      PROFILE_IMAGE,
+    );
 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -265,6 +313,31 @@ function Seo() {
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", canonicalUrl);
+
+    const languageAlternates = isArabic
+      ? [
+          ["ar", `${SITE_URL}/ar/services`],
+          ["en", `${SITE_URL}/services`],
+        ]
+      : normalizedPath === "/services"
+        ? [
+            ["en", `${SITE_URL}/services`],
+            ["ar", `${SITE_URL}/ar/services`],
+          ]
+        : [];
+
+    document.head
+      .querySelectorAll('link[data-portfolio-hreflang="true"]')
+      .forEach((link) => link.remove());
+
+    languageAlternates.forEach(([language, url]) => {
+      const alternate = document.createElement("link");
+      alternate.rel = "alternate";
+      alternate.setAttribute("hreflang", language);
+      alternate.href = url;
+      alternate.dataset.portfolioHreflang = "true";
+      document.head.appendChild(alternate);
+    });
 
     let structuredData = document.head.querySelector(
       "#portfolio-structured-data",
@@ -275,7 +348,9 @@ function Seo() {
       structuredData.id = "portfolio-structured-data";
       document.head.appendChild(structuredData);
     }
-    structuredData.textContent = JSON.stringify(buildStructuredData(normalizedPath));
+    structuredData.textContent = JSON.stringify(
+      buildStructuredData(normalizedPath),
+    );
   }, [pathname]);
 
   return null;

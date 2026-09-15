@@ -18,7 +18,7 @@ function InteriorNav() {
       </Link>
 
       <div className="InteriorNav__pages">
-        <NavLink to="/web-development" onClick={() => window.scrollTo(0, 0)}>
+        <NavLink to="/services" onClick={() => window.scrollTo(0, 0)}>
           Services
         </NavLink>
         <NavLink to="/projects" onClick={() => window.scrollTo(0, 0)}>

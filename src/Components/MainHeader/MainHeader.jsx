@@ -4,7 +4,7 @@ import { ArrowDown, ExternalLink } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 const navigation = [
-  { label: "Services", to: "/web-development" },
+  { label: "Services", to: "/services" },
   { label: "Projects", to: "/projects" },
   { label: "Experience", to: "/experience" },
 ];
